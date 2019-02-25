@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Enterprise | Enterprise Actions Edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon-01.png" type="image/x-icon">
+    <!-- TABULATOR -->
+    <link href="https://unpkg.com/tabulator-tables@4.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/icons/DGN_Fontastic/digiroin-font-icon/font-icon.css" />
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- SLIM SELECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.css" rel="stylesheet"></link>
+
+    <!-- DATE -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DATERANGE PICKER -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- TABULATOR -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" class="wrapper entpActEdit-meta-wrapper">
+        <main id="entpActEdit-meta-page" class="entpActEdit-meta-page grids">
+            <header class="header area scrolled">
+                <div class="menu-container">
+                    <a href="index.html">
+                        <img src="assets/img/logo-digiroin-enterprise.svg" alt="digiroin logo" srcset="">
+                    </a>
+                    <div id="profile-drop" class="profile-drop container">
+                        <div class="drop-container">
+                            <span id="notif-icon" class="font-icon icon-notifications"></span>
+                            <div class="links admin-profile">
+                                <span class="img-admin">
+                                    <img src="https://source.unsplash.com/random/50x50" alt="Admin Profile" class="admin">
+                                </span>
+                                <span class="admin-name">Admin Name</span>
+                                <span><i class="font-icon active icon-arrow"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div id="admin-dropdown" class="admin-dropdown">
+                            <div class="links drop-box">
+                                <p class="profile">
+                                    <a href="profile.html" class="profile">Profile</a>
+                                </p>
+                                <p class="settings">
+                                    <a href="settings.html" class="settings">Settings</a>
+                                </p>
+                                <p class="logout">
+                                    <a href="#logout" class="logout" onclick="logOut()">Logout</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- NOTIFICATIONS DROPDOWN -->
+                        <div id="notif-dropdown" class="notif-dropdown container">
+                            <div class="notif-head">
+                                <div class="notif-head-content">
+                                    <p class="notif-header">Notifications</p>
+                                    <p id="mark-read" class="mark-read">Mark all as read</p>
+                                </div>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SIDE NAV -->
+            <nav class="side-nav container area">
+                <div class="side-nav box">
+                    <div class="links">
+                        <p class="home">
+                            <a href="index.html" class="link home">Home</a>
+                        </p>
+                        <p class="transactions">
+                            <a href="transactions_page.html" class="link transactions">Transactions</a>
+                        </p>
+                        <p class="withdraw">
+                            <a href="withdraw_page.html" class="link withdraw active">Withdraw</a>
+                        </p>
+                        <p class="customers">
+                            <a href="customers_page.html" class="link customers">Customers</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ENTERPRISE META TABLE -->
+            <div class="entpActEdit-meta table-container area">
+
+                <div class="back-home container area">
+                    <div class="back-home-buttons">
+                        <i class="font-icon icon-arrow"></i>
+                        <a href="enterprise_page.html">Back To Enterprise Account</a>
+                    </div>
+                </div>
+
+                <div class="entpActEdit-meta table-box grids">
+                    <!-- Table Head -->
+                    <div class="entpActEdit-meta table-head container area">
+                        <div class="entpActEdit-meta table-head content">
+                            <div class="entpActEdit-meta table-head titles area">
+                                <p id="entpActEdit-meta-tab" class="entpActEdit-meta tablinks">Edit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRANSACTIONS META TABLE -->
+                    <div id="entpActEdit-meta" class="entpActEdit-meta area tabcontent grids">
+                        <div class="entpActEdit-business-nm-title tcell-title v-align-mid area">
+                            <p>Business Name</p>
+                        </div>
+                        <div class="entpActEdit-business-nm-box table-row-boxes area">
+                            <p>Tokopedia</p>
+                        </div>
+                        <div class="entpActEdit-giro-title tcell-title v-align-mid area">
+                            <p>Giro Account Number</p>
+                        </div>
+                        <div class="entpActEdit-giro-box table-row-boxes area">
+                            <p>12344321</p>
+                        </div>
+                        <div class="entpActEdit line1 lines area"></div>
+                        <div class="entpActEdit-aktaComp-title tcell-title v-align-mid area">
+                            <p>Akta Perusahaan</p>
+                        </div>
+                        <div class="entpActEdit-aktaComp-box table-row-boxes area">
+                            <div class="edit-box">
+                                <div class="file-text">
+                                    <p class="font-icon icon-attachment"></p>
+                                    <span id="akta-perusahaan">No File</span>
+                                </div>
+                                <div class="file-upload">
+                                    <input type="button" value="Upload" class="successBtn">
+                                    <input type="file" name="aktaComp" id="upload-aktaComp" class="upload-aktaComp successBtn uploadFile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entpActEdit-npwp-title tcell-title v-align-mid area">
+                            <p>NPWP</p>
+                        </div>
+                        <div class="entpActEdit-npwp-box table-row-boxes area">
+                            <div class="input-box">
+                                <input type="text" name="actionsEditNPWP" id="actionsEditNPWP" placeholder="Enter Your Tax Number">
+                            </div>
+                        </div>
+                        <div class="entpActEdit-npwp-box2 area">
+                            <div class="edit-box">
+                                <div class="file-text">
+                                    <p class="font-icon icon-attachment"></p>
+                                    <span id="nomorPajak">No File</span>
+                                </div>
+                                <div class="file-upload">
+                                    <input type="button" value="Upload" class="successBtn">
+                                    <input type="file" name="NPWP" id="upload-NPWP" class="upload-NPWP successBtn uploadFile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entpActEdit-noRek-title tcell-title v-align-mid area">
+                            <p>Nomor Rekening</p>
+                        </div>
+                        <div class="entpActEdit-noRek-box table-row-boxes area">
+                            <div class="input-box">
+                                <input type="text" name="actionsEditNoRek" id="actionsEditNoRek" placeholder="Enter Your Account Number">
+                            </div>
+                        </div>
+                        <div class="entpActEdit-email-title tcell-title v-align-mid area">
+                            <p>Email</p>
+                        </div>
+                        <div class="entpActEdit-email-box table-row-boxes area">
+                            <div class="input-box">
+                                <input type="text" name="actionsEditEmail" id="actionsEditEmail" placeholder="Enter Your Email">
+                            </div>
+                        </div>
+                        <div class="entpActEdit-alamat-title tcell-title area">
+                            <p>Alamat</p>
+                        </div>
+                        <div class="entpActEdit-alamat-box table-row-boxes area">
+                            <div class="input-box">
+                                <textarea name="alamat-input" id="alamat-input" placeholder="Enter Your Address"></textarea>
+                            </div>
+                        </div>
+                        <div class="entpActEdit-domain-title tcell-title v-align-mid area">
+                            <p>Domain (Optional)</p>
+                        </div>
+                        <div class="entpActEdit-domain-box table-row-boxes area">
+                            <div class="input-box">
+                                <input type="text" name="actionsEditDomain" id="actionsEditDomain" placeholder="Enter Your Domain Name">
+                            </div>
+                        </div>
+                        <div class="entpActEdit-tujuan-title tcell-title v-align-mid area">
+                            <p>Tujuan</p>
+                        </div>
+                        <div class="entpActEdit-tujuan-box table-row-boxes area">
+                            <input type="radio" name="tujuan" id="tujuan1" value="Wallet">
+                            <label for="tujuan1">Wallet</label>
+                        </div>
+                        <div class="entpActEdit-tujuan-box2 table-row-boxes area">
+                            <input type="radio" name="tujuan" id="tujuan2" value="Individual Payment">
+                            <label for="tujuan2">Individual Payment</label>
+                        </div>
+                        <div class="entpActEdit-tujuan-box3 table-row-boxes area">
+                            <input type="radio" name="tujuan" id="tujuan3" value="Distributor Supplier">
+                            <label for="tujuan3">Distributor Supplier</label>
+                        </div>
+                        <div class="entpActEdit-tujuan-box4 table-row-boxes area">
+                            <input type="radio" name="tujuan" id="tujuan4" value="Ecommerce Payment">
+                            <label for="tujuan4">Ecommerce Payment</label>
+                        </div>
+                        <div class="entpActEdit-tujuan-box5 table-row-boxes area">
+                            <input type="radio" name="tujuan" id="tujuan5" value="Lainnya">
+                            <label for="tujuan5">Lainnya, </label>
+                        </div>
+                        <div class="entpActEdit-tujuan-box6 table-row-boxes area">
+                            <div class="input-box">
+                                <input type="text" name="tujuan" id="tujuan6" placeholder="Another Options">
+                            </div>
+                        </div>
+                        <div class="entpActEdit-jmPeg-title tcell-title v-align-mid area">
+                            <p>Jumlah Pegawai</p>
+                        </div>
+                        <div class="entpActEdit-jmPeg-box table-row-boxes area">
+                            <input type="radio" name="jmPeg" id="jmPeg1" value="Less Than 20">
+                            <label for="jmPeg1">&lt; 20 Orang</label>
+                        </div>
+                        <div class="entpActEdit-jmPeg-box2 table-row-boxes area">
+                            <input type="radio" name="jmPeg" id="jmPeg2" value="20 - 100">
+                            <label for="jmPeg2">20 - 100 Orang</label>
+                        </div>
+                        <div class="entpActEdit-jmPeg-box3 table-row-boxes area">
+                            <input type="radio" name="jmPeg" id="jmPeg3" value="More Than 100">
+                            <label for="jmPeg3">&gt; 100 Orang</label>
+                        </div>
+                        <div class="entpActEdit line2 lines area"></div>
+                        <div class="entpActEdit bottom-buttons-box table-row-boxes area">
+                            <input type="button" value="Cancel" class="cancel" onclick="cancelEdit()">
+                            <input type="button" value="Save" class="create" onclick="saveEdit()">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/enterprise_act_edit.js"></script>
+</body>
+</html>

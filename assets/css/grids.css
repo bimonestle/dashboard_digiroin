@@ -1,0 +1,2159 @@
+/* HOMEPAGE */
+.homepage.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . sch-box sch-box sch-box sch-box sch-box . . ."
+    ". . . . . home-tbl home-tbl home-tbl home-tbl home-tbl home-tbl home-tbl home-tbl home-tbl home-tbl . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.search-filter.area {
+    grid-area: sch-box;
+}
+.home.table-container.area {
+    grid-area: home-tbl;
+}
+
+/* HOME TABLE */
+.home.table-box.grids {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "home-thead home-thead home-thead home-thead home-thead home-thead home-thead home-thead home-thead home-thead "
+    "av-box av-box av-box av-box av-box b2b-box b2b-box b2b-box b2b-box b2b-box "
+    "b2btype b2btype b2btype b2btype b2btype measure measure measure measure measure "
+    "sel-date sel-date sel-date sel-date sel-date intersect intersect intersect intersect intersect "
+    "chart chart chart chart chart chart chart chart chart chart "
+}
+.home.table-head.area {
+    grid-area: home-thead;
+}
+.big-boxes.av-bal.area {
+    grid-area: av-box;
+}
+.big-boxes.total-b2b.area {
+    grid-area: b2b-box;
+}
+.business-type.area {
+    grid-area: b2btype;
+}
+.select-date.area {
+    grid-area: sel-date;
+}
+.measurement-type.area {
+    grid-area: measure;
+}
+.intersection-type.area {
+    grid-area: intersect;
+}
+.chart.area {
+    grid-area: chart;
+}
+
+/* TRANSACTIONS PAGE */
+.transactions-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . trx-con trx-con trx-con trx-con trx-con trx-con trx-con trx-con trx-con trx-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.transactions.table-container.area {
+    grid-area: trx-con;
+}
+
+.transactions.table-box.grids {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "trx-thead trx-thead trx-thead trx-thead trx-thead trx-thead trx-thead trx-thead trx-thead trx-thead"
+    "trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl trx-tbl"
+}
+.transactions.table-head.area {
+    grid-area: trx-thead;
+}
+.transactions-table.area {
+    grid-area: trx-tbl;
+}
+
+/* TRANSACTIONS META PAGE */
+.transactions-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.transactions-meta.table-container.area {
+    grid-area: smart-con;
+}
+.transactions-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead trxmeta-thead"
+    "trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont trxmeta-cont"
+}
+.transactions-meta.table-head.area {
+    grid-area: trxmeta-thead;
+}
+.transactions-meta.tabcontent.area {
+    grid-area: trxmeta-cont;
+}
+.transactions-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . . ."
+    ". type-title type-title type-box type-box type-box type-box . . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". trxID trxID trxBox trxBox trxBox trxBox . . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". dateTitle dateTitle dateBox dateBox dateBox dateBox . . ."
+    "line3 line3 line3 line3 line3 line3 line3 line3 line3 line3"
+    ". amountTitle amountTitle amountBox amountBox amountBox amountBox . . ."
+    "line4 line4 line4 line4 line4 line4 line4 line4 line4 line4"
+    ". custTitle custTitle custBox custBox custBox custBox . . ."
+    "line5 line5 line5 line5 line5 line5 line5 line5 line5 line5"
+    ". phoneTitle phoneTitle phoneBox phoneBox phoneBox phoneBox . . ."
+    "line6 line6 line6 line6 line6 line6 line6 line6 line6 line6"
+    ". emailTitle emailTitle emailBox emailBox emailBox emailBox . . ."
+}
+.trx-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.trx-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.trx-type-title.area {
+    grid-area: type-title;
+}
+.trx-type-box.area {
+    grid-area: type-box;
+}
+.trx.line1.area {
+    grid-area: line1;
+}
+.trx-id-title1.area {
+    grid-area: trxID;
+}
+.trx-id-box1.area {
+    grid-area: trxBox;
+}
+.trx.line2.area {
+    grid-area: line2;
+}
+.trx-date-title1.area {
+    grid-area: dateTitle;
+}
+.trx-date-box1.area {
+    grid-area: dateBox;
+}
+.trx.line3.area {
+    grid-area: line3;
+}
+.trx-amount-title1.area {
+    grid-area: amountTitle;
+}
+.trx-amount-box1.area {
+    grid-area: amountBox;
+}
+.trx.line3.area {
+    grid-area: line3;
+}
+.trx-cust-title.area {
+    grid-area: custTitle;
+}
+.trx-cust-box.area {
+    grid-area: custBox;
+}
+.trx.line4.area {
+    grid-area: line4;
+}
+.trx-phone-title.area {
+    grid-area: phoneTitle;
+}
+.trx-phone-box.area {
+    grid-area: phoneBox;
+}
+.trx.line5.area {
+    grid-area: line5;
+}
+.trx-email-title.area {
+    grid-area: emailTitle;
+}
+.trx-email-box.area {
+    grid-area: emailBox;
+}
+.trx.line6.area {
+    grid-area: line6;
+}
+
+/* ENTERPRISE PAGE */
+.enterprise-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . entp-con entp-con entp-con entp-con entp-con entp-con entp-con entp-con entp-con entp-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.enterprise.table-container.area {
+    grid-area: entp-con;
+}
+.enterprise.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "entp-thead entp-thead entp-thead entp-thead entp-thead entp-thead entp-thead entp-thead entp-thead entp-thead"
+    "mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl mn-acc-tbl"
+    "act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl"
+}
+.enterprise.table-head.area {
+    grid-area: entp-thead;
+}
+.mn-acc-table.area {
+    grid-area: mn-acc-tbl;
+}
+.actions-table.area {
+    grid-area: act-tbl;
+}
+
+/* PERSONAL PAGE */
+.personal-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . psn-con psn-con psn-con psn-con psn-con psn-con psn-con psn-con psn-con psn-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.personal.table-container.area {
+    grid-area: psn-con;
+}
+.personal.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "psn-thead psn-thead psn-thead psn-thead psn-thead psn-thead psn-thead psn-thead psn-thead psn-thead"
+    "person-tbl person-tbl person-tbl person-tbl person-tbl person-tbl person-tbl person-tbl person-tbl person-tbl"
+    "act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl act-tbl"
+}
+.personal.table-head.area {
+    grid-area: psn-thead;
+}
+.mn-acc-personal.area {
+    grid-area: person-tbl;
+}
+.actions-personal.area {
+    grid-area: act-tbl;
+}
+
+/* MAIN ACCOUNT META PAGE */
+.mainAcc-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con . . ."
+    ". . . . . detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.mainAcc-meta.table-container.area {
+    grid-area: mainAcc-con;
+}
+.detailSubAcc.area {
+    grid-area: detSubAcc;
+}
+.mainAcc-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead"
+    "mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont"
+}
+.mainAcc-meta.table-head.area {
+    grid-area: mainAcc-thead;
+}
+.mainAcc-meta.tabcontent.area {
+    grid-area: mainAcc-cont;
+}
+.mainAcc-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". mnEmail-title mnEmail-title mnEmail-title mnEmail-box mnEmail-box mnEmail-box mnEmail-box . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line3 line3 line3 line3 line3 line3 line3 line3 line3 line3"
+    ". vaTitle vaTitle vaTitle vaBox vaBox vaBox vaBox . ."
+    "line4 line4 line4 line4 line4 line4 line4 line4 line4 line4"
+    ". dateTitle dateTitle dateTitle dateBox dateBox dateBox dateBox . ."
+    "line5 line5 line5 line5 line5 line5 line5 line5 line5 line5"
+    ". joinTitle joinTitle joinTitle joinBox joinBox joinBox joinBox . ."
+}
+.mainAcc-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.mainAcc-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.mainAcc.line1.area {
+    grid-area: line1;
+}
+.mainAcc-email-title.area {
+    grid-area: mnEmail-title;
+}
+.mainAcc-email-box.area {
+    grid-area: mnEmail-box;
+}
+.mainAcc.line2.area {
+    grid-area: line2;
+}
+.mainAcc-giro-title.area {
+    grid-area: grAccTitle;
+}
+.mainAcc-giro-box.area {
+    grid-area: grAccBox;
+}
+.mainAcc.line3.area {
+    grid-area: line3;
+}
+.mainAcc-va-title.area {
+    grid-area: vaTitle;
+}
+.mainAcc-va-box.area {
+    grid-area: vaBox;
+}
+.mainAcc.line4.area {
+    grid-area: line4;
+}
+.mainAcc-date-title.area {
+    grid-area: dateTitle;
+}
+.mainAcc-date-box.area {
+    grid-area: dateBox;
+}
+.mainAcc.line5.area {
+    grid-area: line5;
+}
+.mainAcc-join-title.area {
+    grid-area: joinTitle;
+}
+.mainAcc-join-box.area {
+    grid-area: joinBox;
+}
+
+/* ENTERPRISE ACTIONS META PAGE */
+.entpAct-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con . . ."
+    ". . . . . detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.entpAct-meta.table-container.area {
+    grid-area: mainAcc-con;
+}
+.detailSubAcc.area {
+    grid-area: detSubAcc;
+}
+.entpAct-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead"
+    "mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont"
+}
+.entpAct-meta.table-head.area {
+    grid-area: mainAcc-thead;
+}
+.entpAct-meta.tabcontent.area {
+    grid-area: mainAcc-cont;
+}
+.entpAct-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". akta-title akta-title akta-title akta-box akta-box akta-box akta-tick . ."
+    ". npwp-title npwp-title npwp-title npwp-box npwp-box npwp-box npwp-tick . ."
+    ". . . . npwp-box2 npwp-box2 npwp-box2 npwp-box2 . ."
+    ". noRek-title noRek-title noRek-title noRek-box noRek-box noRek-box noRek-tick . ."
+    ". mnEmail-title mnEmail-title mnEmail-title mnEmail-box mnEmail-box mnEmail-box mnEmail-tick . ."
+    ". alamat-title alamat-title alamat-title alamat-box alamat-box alamat-box alamat-tick . ."
+    ". domain-title domain-title domain-title domain-box domain-box domain-box domain-tick . ."
+    ". tujuan-title tujuan-title tujuan-title tujuan-box tujuan-box tujuan-box tujuan-tick . ."
+    ". jmPeg-title jmPeg-title jmPeg-title jmPeg-box jmPeg-box jmPeg-box jmPeg-tick . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". . . . . . . buttons buttons buttons"
+}
+.entpAct-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.entpAct-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.entpAct.line1.area {
+    grid-area: line1;
+}
+.entpAct-email-title.area {
+    grid-area: mnEmail-title;
+}
+.entpAct-email-box.area {
+    grid-area: mnEmail-box;
+}
+.entpAct-email-tick.area {
+    grid-area: mnEmail-tick;
+}
+.entpAct-aktaComp-title.area {
+    grid-area: akta-title;
+}
+.entpAct-aktaComp-box.area {
+    grid-area: akta-box;
+}
+.entpAct-aktaComp-tick.area {
+    grid-area: akta-tick;
+}
+.entpAct-npwp-title.area {
+    grid-area: npwp-title;
+}
+.entpAct-npwp-box.area {
+    grid-area: npwp-box;
+}
+.entpAct-npwp-box2.area {
+    grid-area: npwp-box2;
+}
+.entpAct-npwp-tick.area {
+    grid-area: npwp-tick;
+}
+.entpAct-noRek-title.area {
+    grid-area: noRek-title;
+}
+.entpAct-noRek-box.area {
+    grid-area: noRek-box;
+}
+.entpAct-noRek-tick.area {
+    grid-area: noRek-tick;
+}
+.entpAct-alamat-title.area {
+    grid-area: alamat-title;
+}
+.entpAct-alamat-box.area {
+    grid-area: alamat-box;
+}
+.entpAct-alamat-tick.area {
+    grid-area: alamat-tick;
+}
+.entpAct-domain-title.area {
+    grid-area: domain-title;
+}
+.entpAct-domain-box.area {
+    grid-area: domain-box;
+}
+.entpAct-domain-tick.area {
+    grid-area: domain-tick;
+}
+.entpAct-tujuan-title.area {
+    grid-area: tujuan-title;
+}
+.entpAct-tujuan-box.area {
+    grid-area: tujuan-box;
+}
+.entpAct-tujuan-tick.area {
+    grid-area: tujuan-tick;
+}
+.entpAct-jmPeg-title.area {
+    grid-area: jmPeg-title;
+}
+.entpAct-jmPeg-box.area {
+    grid-area: jmPeg-box;
+}
+.entpAct-jmPeg-tick.area {
+    grid-area: jmPeg-tick;
+}
+.entpAct-giro-title.area {
+    grid-area: grAccTitle;
+}
+.entpAct-giro-box.area {
+    grid-area: grAccBox;
+}
+.entpAct-giro-tick.area {
+    grid-area: giro-tick;
+}
+.entpAct.line2.area {
+    grid-area: line2;
+}
+.entpAct.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* ENTERPRISE ACTIONS EDIT META PAGE */
+.entpActEdit-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con . . ."
+    ". . . . . detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.entpActEdit-meta.table-container.area {
+    grid-area: mainAcc-con;
+}
+.detailSubAcc.area {
+    grid-area: detSubAcc;
+}
+.entpActEdit-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead"
+    "mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont"
+}
+.entpActEdit-meta.table-head.area {
+    grid-area: mainAcc-thead;
+}
+.entpActEdit-meta.tabcontent.area {
+    grid-area: mainAcc-cont;
+}
+.entpActEdit-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". akta-title akta-title akta-title akta-box akta-box akta-box akta-box . ."
+    ". npwp-title npwp-title npwp-title npwp-box npwp-box npwp-box npwp-box . ."
+    ". . . . npwp-box2 npwp-box2 npwp-box2 npwp-box2 . ."
+    ". noRek-title noRek-title noRek-title noRek-box noRek-box noRek-box noRek-box . ."
+    ". mnEmail-title mnEmail-title mnEmail-title mnEmail-box mnEmail-box mnEmail-box mnEmail-box . ."
+    ". alamat-title alamat-title alamat-title alamat-box alamat-box alamat-box alamat-box . ."
+    ". domain-title domain-title domain-title domain-box domain-box domain-box domain-box . ."
+    ". tujuan-title tujuan-title tujuan-title tujuan-box tujuan-box tujuan-box tujuan-box . ."
+    ". . . . tujuan-box2 tujuan-box2 tujuan-box2 tujuan-box2 . ."
+    ". . . . tujuan-box3 tujuan-box3 tujuan-box3 tujuan-box3 . ."
+    ". . . . tujuan-box4 tujuan-box4 tujuan-box4 tujuan-box4 . ."
+    ". . . . tujuan-box5 tujuan-box5 tujuan-box5 tujuan-box5 . ."
+    ". . . . tujuan-box6 tujuan-box6 tujuan-box6 tujuan-box6 . ."
+    ". jmPeg-title jmPeg-title jmPeg-title jmPeg-box jmPeg-box jmPeg-box jmPeg-box . ."
+    ". . . . jmPeg-box2 jmPeg-box2 jmPeg-box2 jmPeg-box2 . ."
+    ". . . . jmPeg-box3 jmPeg-box3 jmPeg-box3 jmPeg-box3 . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". . . . . . . buttons buttons buttons"
+}
+.entpActEdit-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.entpActEdit-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.entpActEdit.line1.area {
+    grid-area: line1;
+}
+.entpActEdit-email-title.area {
+    grid-area: mnEmail-title;
+}
+.entpActEdit-email-box.area {
+    grid-area: mnEmail-box;
+}
+.entpActEdit-aktaComp-title.area {
+    grid-area: akta-title;
+}
+.entpActEdit-aktaComp-box.area {
+    grid-area: akta-box;
+}
+.entpActEdit-aktaComp-tick.area {
+    grid-area: akta-tick;
+}
+.entpActEdit-npwp-title.area {
+    grid-area: npwp-title;
+}
+.entpActEdit-npwp-box.area {
+    grid-area: npwp-box;
+}
+.entpActEdit-npwp-box2.area {
+    grid-area: npwp-box2;
+}
+.entpActEdit-npwp-tick.area {
+    grid-area: npwp-tick;
+}
+.entpActEdit-noRek-title.area {
+    grid-area: noRek-title;
+}
+.entpActEdit-noRek-box.area {
+    grid-area: noRek-box;
+}
+.entpActEdit-noRek-tick.area {
+    grid-area: noRek-tick;
+}
+.entpActEdit-alamat-title.area {
+    grid-area: alamat-title;
+}
+.entpActEdit-alamat-box.area {
+    grid-area: alamat-box;
+}
+.entpActEdit-alamat-tick.area {
+    grid-area: alamat-tick;
+}
+.entpActEdit-domain-title.area {
+    grid-area: domain-title;
+}
+.entpActEdit-domain-box.area {
+    grid-area: domain-box;
+}
+.entpActEdit-domain-tick.area {
+    grid-area: domain-tick;
+}
+.entpActEdit-tujuan-title.area {
+    grid-area: tujuan-title;
+}
+.entpActEdit-tujuan-box.area {
+    grid-area: tujuan-box;
+}
+.entpActEdit-tujuan-box2.area {
+    grid-area: tujuan-box2;
+}
+.entpActEdit-tujuan-box3.area {
+    grid-area: tujuan-box3;
+}
+.entpActEdit-tujuan-box4.area {
+    grid-area: tujuan-box4;
+}
+.entpActEdit-tujuan-box5.area {
+    grid-area: tujuan-box5;
+}
+.entpActEdit-tujuan-box6.area {
+    grid-area: tujuan-box6;
+}
+.entpActEdit-tujuan-tick.area {
+    grid-area: tujuan-tick;
+}
+.entpActEdit-jmPeg-title.area {
+    grid-area: jmPeg-title;
+}
+.entpActEdit-jmPeg-box.area {
+    grid-area: jmPeg-box;
+}
+.entpActEdit-jmPeg-box2.area {
+    grid-area: jmPeg-box2;
+}
+.entpActEdit-jmPeg-box3.area {
+    grid-area: jmPeg-box3;
+}
+.entpActEdit-jmPeg-tick.area {
+    grid-area: jmPeg-tick;
+}
+.entpActEdit-giro-title.area {
+    grid-area: grAccTitle;
+}
+.entpActEdit-giro-box.area {
+    grid-area: grAccBox;
+}
+.entpActEdit-giro-tick.area {
+    grid-area: giro-tick;
+}
+.entpActEdit.line2.area {
+    grid-area: line2;
+}
+.entpActEdit.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* PERSONAL MAIN ACCOUNT META PAGE */
+.persAcc-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con persAcc-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.persAcc-meta.table-container.area {
+    grid-area: persAcc-con;
+}
+.persAcc-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead persAcc-thead"
+    "persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont persAcc-cont"
+}
+.persAcc-meta.table-head.area {
+    grid-area: persAcc-thead;
+}
+.persAcc-meta.tabcontent.area {
+    grid-area: persAcc-cont;
+}
+.persAcc-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". mnEmail-title mnEmail-title mnEmail-title mnEmail-box mnEmail-box mnEmail-box mnEmail-box . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line3 line3 line3 line3 line3 line3 line3 line3 line3 line3"
+    ". vaTitle vaTitle vaTitle vaBox vaBox vaBox vaBox . ."
+    "line4 line4 line4 line4 line4 line4 line4 line4 line4 line4"
+    ". dateTitle dateTitle dateTitle dateBox dateBox dateBox dateBox . ."
+    "line5 line5 line5 line5 line5 line5 line5 line5 line5 line5"
+    ". joinTitle joinTitle joinTitle joinBox joinBox joinBox joinBox . ."
+}
+.persAcc-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.persAcc-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.persAcc.line1.area {
+    grid-area: line1;
+}
+.persAcc-email-title.area {
+    grid-area: mnEmail-title;
+}
+.persAcc-email-box.area {
+    grid-area: mnEmail-box;
+}
+.persAcc.line2.area {
+    grid-area: line2;
+}
+.persAcc-giro-title.area {
+    grid-area: grAccTitle;
+}
+.persAcc-giro-box.area {
+    grid-area: grAccBox;
+}
+.persAcc.line3.area {
+    grid-area: line3;
+}
+.persAcc-va-title.area {
+    grid-area: vaTitle;
+}
+.persAcc-va-box.area {
+    grid-area: vaBox;
+}
+.persAcc.line4.area {
+    grid-area: line4;
+}
+.persAcc-date-title.area {
+    grid-area: dateTitle;
+}
+.persAcc-date-box.area {
+    grid-area: dateBox;
+}
+.persAcc.line5.area {
+    grid-area: line5;
+}
+.persAcc-join-title.area {
+    grid-area: joinTitle;
+}
+.persAcc-join-box.area {
+    grid-area: joinBox;
+}
+
+/* PERSONAL ACTIONS META PAGE */
+.persAct-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con . . ."
+    ". . . . . detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.persAct-meta.table-container.area {
+    grid-area: mainAcc-con;
+}
+.detailSubAcc.area {
+    grid-area: detSubAcc;
+}
+.persAct-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead"
+    "mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont"
+}
+.persAct-meta.table-head.area {
+    grid-area: mainAcc-thead;
+}
+.persAct-meta.tabcontent.area {
+    grid-area: mainAcc-cont;
+}
+.persAct-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". ktp-title ktp-title ktp-title ktp-box ktp-box ktp-box ktp-tick . ."
+    ". alamat-title alamat-title alamat-title alamat-box alamat-box alamat-box alamat-tick . ."
+    ". noTelp-title noTelp-title noTelp-title noTelp-box noTelp-box noTelp-box noTelp-tick . ."
+    ". npwp-title npwp-title npwp-title npwp-box npwp-box npwp-box npwp-tick . ."
+    ". noRek-title noRek-title noRek-title noRek-box noRek-box noRek-box noRek-tick . ."
+}
+.persAct-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.persAct-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.persAct.line1.area {
+    grid-area: line1;
+}
+.persAct-aktaComp-title.area {
+    grid-area: akta-title;
+}
+.persAct-aktaComp-box.area {
+    grid-area: akta-box;
+}
+.persAct-aktaComp-tick.area {
+    grid-area: akta-tick;
+}
+.persAct-ktp-title.area {
+    grid-area: ktp-title;
+}
+.persAct-ktp-box.area {
+    grid-area: ktp-box;
+}
+.persAct-ktp-tick.area {
+    grid-area: ktp-tick;
+}
+.persAct-npwp-title.area {
+    grid-area: npwp-title;
+}
+.persAct-npwp-box.area {
+    grid-area: npwp-box;
+}
+.persAct-npwp-tick.area {
+    grid-area: npwp-tick;
+}
+.persAct-noTelp-title.area {
+    grid-area: noTelp-title;
+}
+.persAct-noTelp-box.area {
+    grid-area: noTelp-box;
+}
+.persAct-noTelp-tick.area {
+    grid-area: noTelp-tick;
+}
+.persAct-noRek-title.area {
+    grid-area: noRek-title;
+}
+.persAct-noRek-box.area {
+    grid-area: noRek-box;
+}
+.persAct-noRek-tick.area {
+    grid-area: noRek-tick;
+}
+.persAct-alamat-title.area {
+    grid-area: alamat-title;
+}
+.persAct-alamat-box.area {
+    grid-area: alamat-box;
+}
+.persAct-alamat-tick.area {
+    grid-area: alamat-tick;
+}
+.persAct-domain-title.area {
+    grid-area: domain-title;
+}
+.persAct-domain-box.area {
+    grid-area: domain-box;
+}
+.persAct-domain-tick.area {
+    grid-area: domain-tick;
+}
+.persAct-tujuan-title.area {
+    grid-area: tujuan-title;
+}
+.persAct-tujuan-box.area {
+    grid-area: tujuan-box;
+}
+.persAct-tujuan-tick.area {
+    grid-area: tujuan-tick;
+}
+.persAct-jmPeg-title.area {
+    grid-area: jmPeg-title;
+}
+.persAct-jmPeg-box.area {
+    grid-area: jmPeg-box;
+}
+.persAct-jmPeg-tick.area {
+    grid-area: jmPeg-tick;
+}
+.persAct-giro-title.area {
+    grid-area: grAccTitle;
+}
+.persAct-giro-box.area {
+    grid-area: grAccBox;
+}
+.persAct-giro-tick.area {
+    grid-area: giro-tick;
+}
+.persAct.line2.area {
+    grid-area: line2;
+}
+.persAct.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* PERSONAL ACTIONS EDIT META PAGE */
+.persActEdit-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con mainAcc-con . . ."
+    ". . . . . detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc detSubAcc . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.persActEdit-meta.table-container.area {
+    grid-area: mainAcc-con;
+}
+.detailSubAcc.area {
+    grid-area: detSubAcc;
+}
+.persActEdit-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead mainAcc-thead"
+    "mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont mainAcc-cont"
+}
+.persActEdit-meta.table-head.area {
+    grid-area: mainAcc-thead;
+}
+.persActEdit-meta.tabcontent.area {
+    grid-area: mainAcc-cont;
+}
+.persActEdit-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". bsn-title bsn-title bsn-title bsn-name bsn-name bsn-name bsn-name . ."
+    ". grAccTitle grAccTitle grAccTitle grAccBox grAccBox grAccBox grAccBox . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". ktp-title ktp-title ktp-title ktp-box ktp-box ktp-box ktp-box . ."
+    ". . . . ktp-box2 ktp-box2 ktp-box2 ktp-box2 . ."
+    ". alamat-title alamat-title alamat-title alamat-box alamat-box alamat-box alamat-box . ."
+    ". noTelp-title noTelp-title noTelp-title noTelp-box noTelp-box noTelp-box noTelp-box . ."
+    ". npwp-title npwp-title npwp-title npwp-box npwp-box npwp-box npwp-box . ."
+    ". . . . npwp-box2 npwp-box2 npwp-box2 npwp-box2 . ."
+    ". noRek-title noRek-title noRek-title noRek-box noRek-box noRek-box noRek-box . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". . . . . . . buttons buttons buttons"
+}
+.persActEdit-business-nm-title.area {
+    grid-area: bsn-title;
+}
+.persActEdit-business-nm-box.area {
+    grid-area: bsn-name;
+}
+.persActEdit.line1.area {
+    grid-area: line1;
+}
+.persActEdit-ktpComp-title.area {
+    grid-area: ktp-title;
+}
+.persActEdit-ktpComp-box.area {
+    grid-area: ktp-box;
+}    
+.persActEdit-ktpComp-box2.area {
+    grid-area: ktp-box2;
+}    
+.persActEdit-npwp-title.area {
+    grid-area: npwp-title;
+}
+.persActEdit-npwp-box.area {
+    grid-area: npwp-box;
+}
+.persActEdit-npwp-box2.area {
+    grid-area: npwp-box2;
+}
+.persActEdit-noRek-title.area {
+    grid-area: noRek-title;
+}
+.persActEdit-noRek-box.area {
+    grid-area: noRek-box;
+}
+.persActEdit-alamat-title.area {
+    grid-area: alamat-title;
+}
+.persActEdit-alamat-box.area {
+    grid-area: alamat-box;
+}
+.persActEdit-noTelp-title.area {
+    grid-area: noTelp-title;
+}
+.persActEdit-noTelp-box.area {
+    grid-area: noTelp-box;
+}
+.persActEdit-giro-title.area {
+    grid-area: grAccTitle;
+}
+.persActEdit-giro-box.area {
+    grid-area: grAccBox;
+}
+.persActEdit.line2.area {
+    grid-area: line2;
+}
+.persActEdit.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* SMART CONTRACT PAGE */
+.smart-contract-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con smart-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.smart-contract.table-container.area {
+    grid-area: smart-con;
+}
+.smart-contract.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead"
+    "cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con"
+    "sts-con sts-con sts-con sts-con sts-con sts-con sts-con sts-con sts-con sts-con"
+}
+.smart-contract.table-head.area {
+    grid-area: con-thead;
+}
+.create-smart-contract.area {
+    grid-area: cr-con;
+}
+.status-smart-contract.area {
+    grid-area: sts-con;
+}
+.create-smart-contract.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". con-id-title con-id-title con-id-box con-id-box con-id-box con-id-box . . ."
+    ". daterange-title daterange-title daterange-box daterange-box daterange-box daterange-box . . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". partner1 partner1 . . . . . . ."
+    ". partner-nm1 partner-nm1 company-box1 company-box1 company-box1 company-box1 . . ."
+    ". code-nm1 code-nm1 id-partner1 id-partner1 id-partner1 id-partner1 . . ."
+    ". giro-title1 giro-title1 giro-num1 giro-num1 giro-num1 giro-num1 . . ."
+    ". pic-title1 pic-title1 pic-comp1 pic-comp1 pic-comp1 pic-comp1 . . ."
+    ". email-title1 email-title1 email-add1 email-add1 email-add1 email-add1 . . ."
+    ". phone-title1 phone-title1 phone-num1 phone-num1 phone-num1 phone-num1 . . ."
+    ". param1 param1 . . . . . . ."
+    ". saldo-title1 saldo-title1 saldo-num1 saldo-num1 saldo-num1 saldo-num1 . . ."
+    ". exch-title1 exch-title1 exch-unit1 exch-unit1 exch-unit1 exch-unit1 . . ."
+    ". jumtrx-title1 jumtrx-title1 jumtrx-num1 jumtrx-num1 jumtrx-num1 jumtrx-num1 . . ."
+    ". limitbal-title1 limitbal-title1 radio1 radio1 radio1 radio1 . . ."
+    ". . . radio2 radio2 radio2 radio2 . . ."
+    ". . . limitbal-num1 limitbal-num1 limitbal-num1 limitbal-num1 . . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". partner2 partner2 . . . . . . ."
+    ". partner-nm2 partner-nm2 company-box2 company-box2 company-box2 company-box2 . . ."
+    ". code-nm2 code-nm2 id-partner2 id-partner2 id-partner2 id-partner2 . . ."
+    ". giro-title2 giro-title2 giro-num2 giro-num2 giro-num2 giro-num2 . . ."
+    ". pic-title2 pic-title2 pic-comp2 pic-comp2 pic-comp2 pic-comp2 . . ."
+    ". email-title2 email-title2 email-add2 email-add2 email-add2 email-add2 . . ."
+    ". phone-title2 phone-title2 phone-num2 phone-num2 phone-num2 phone-num2 . . ."
+    ". param2 param2 . . . . . . ."
+    ". saldo-title2 saldo-title2 saldo-num2 saldo-num2 saldo-num2 saldo-num2 . . ."
+    ". exch-title2 exch-title2 exch-unit2 exch-unit2 exch-unit2 exch-unit2 . . ."
+    ". jumtrx-title2 jumtrx-title2 jumtrx-num2 jumtrx-num2 jumtrx-num2 jumtrx-num2 . . ."
+    ". limitbal-title2 limitbal-title2 radio3 radio3 radio3 radio3 . . ."
+    ". . . radio4 radio4 radio4 radio4 . . ."
+    ". . . limitbal-num2 limitbal-num2 limitbal-num2 limitbal-num2 . . ."
+    "line3 line3 line3 line3 line3 line3 line3 line3 line3 line3"
+    ". curex-title1 curex-title1 curex-box1 curex-box1 curex-box1 curex-box1 curex-box1 . ."
+    "line4 line4 line4 line4 line4 line4 line4 line4 line4 line4"
+    ". . . . . . buttons buttons buttons buttons"
+}
+.contract-id-title.area {
+    grid-area: con-id-title;
+}
+.contract-id-box.area {
+    grid-area: con-id-box;
+}
+.daterange-title.area {
+    grid-area: daterange-title;
+}
+.scdaterange.area {
+    grid-area: daterange-box;
+}
+.sc.line1.area {
+    grid-area: line1;
+}
+.partner-title1.area {
+    grid-area: partner1;
+}
+.partner-name-title1.area {
+    grid-area: partner-nm1;
+}
+.partner-name-box1.area {
+    grid-area: company-box1;
+}
+.code-name-title1.area {
+    grid-area: code-nm1;
+}
+.code-name-box1.area {
+    grid-area: id-partner1;
+}
+.giro-acc-title1.area {
+    grid-area: giro-title1;
+}
+.giro-acc-box1.area {
+    grid-area: giro-num1;
+}
+.pic-title1.area {
+    grid-area: pic-title1;
+}
+.pic-box1.area {
+    grid-area: pic-comp1;
+}
+.email-title1.area {
+    grid-area: email-title1;
+}
+.create-smart-contract .email-box1.area {
+    grid-area: email-add1;
+}
+.phone-title1.area {
+    grid-area: phone-title1;
+}
+.phone-box1.area {
+    grid-area: phone-num1;
+}
+.param-title1.area {
+    grid-area: param1;
+}
+.saldo-title1.area {
+    grid-area: saldo-title1;
+}
+.saldo-box1.area {
+    grid-area: saldo-num1;
+}
+.exchange-title1.area {
+    grid-area: exch-title1;
+}
+.exchange-box1.area {
+    grid-area: exch-unit1;
+}
+.jumtrx-title1.area {
+    grid-area: jumtrx-title1;
+}
+.jumtrx-box1.area {
+    grid-area: jumtrx-num1;
+}
+.limitbal-title1.area {
+    grid-area: limitbal-title1;
+}
+.limitbal-box1.area {
+    grid-area: radio1;
+}
+.limitbal-box2.area {
+    grid-area: radio2;
+}
+.limitbal-box3.area {
+    grid-area: limitbal-num1;
+}
+.sc.line2.area {
+    grid-area: line2;
+}
+/* Partner 2 */
+.partner-title2.area {
+    grid-area: partner2;
+}
+.partner-name-title2.area {
+    grid-area: partner-nm2;
+}
+.partner-name-box2.area {
+    grid-area: company-box2;
+}
+.code-name-title2.area {
+    grid-area: code-nm2;
+}
+.code-name-box2.area {
+    grid-area: id-partner2;
+}
+.giro-acc-title2.area {
+    grid-area: giro-title2;
+}
+.giro-acc-box2.area {
+    grid-area: giro-num2;
+}
+.pic-title2.area {
+    grid-area: pic-title2;
+}
+.pic-box2.area {
+    grid-area: pic-comp2;
+}
+.email-title2.area {
+    grid-area: email-title2;
+}
+.email-box2.area {
+    grid-area: email-add2;
+}
+.phone-title2.area {
+    grid-area: phone-title2;
+}
+.phone-box2.area {
+    grid-area: phone-num2;
+}
+.param-title2.area {
+    grid-area: param2;
+}
+.saldo-title2.area {
+    grid-area: saldo-title2;
+}
+.saldo-box2.area {
+    grid-area: saldo-num2;
+}
+.exchange-title2.area {
+    grid-area: exch-title2;
+}
+.exchange-box2.area {
+    grid-area: exch-unit2;
+}
+.jumtrx-title2.area {
+    grid-area: jumtrx-title2;
+}
+.jumtrx-box2.area {
+    grid-area: jumtrx-num2;
+}
+.limitbal-title2.area {
+    grid-area: limitbal-title2;
+}
+.limitbal-box4.area {
+    grid-area: radio3;
+}
+.limitbal-box5.area {
+    grid-area: radio4;
+}
+.limitbal-box6.area {
+    grid-area: limitbal-num2;
+}
+.sc.line3.area {
+    grid-area: line3;
+}
+.curex-partners-title1.area {
+    grid-area: curex-title1;
+}
+.curex-partners-box1.area {
+    grid-area: curex-box1;
+}
+.sc.line4.area {
+    grid-area: line4;
+}
+.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* SMART META PAGE */
+.smart-meta-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con smartMT-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.smart-meta.table-container.area {
+    grid-area: smartMT-con;
+}
+.smart-meta.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead"
+    "cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con cr-con"
+}
+.smart-meta.table-head.area {
+    grid-area: con-thead;
+}
+.create-smart-meta.area {
+    grid-area: cr-con;
+}
+.create-smart-meta.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". con-id-title con-id-title . con-id-box con-id-box con-id-box con-id-box . ."
+    ". dateStart-title dateStart-title . dateStart-box dateStart-box dateStart-box dateStart-box . ."
+    ". dateEnd-title dateEnd-title . dateEnd-box dateEnd-box dateEnd-box dateEnd-box . ."
+    ". statusCtr-title statusCtr-title . statusCtr-box statusCtr-box statusCtr-box statusCtr-box . ."
+    "line1 line1 line1 line1 line1 line1 line1 line1 line1 line1"
+    ". partner1 partner1 . . . . . . ."
+    ". partner-nm1 partner-nm1 . company-box1 company-box1 company-box1 company-box1 . ."
+    ". code-nm1 code-nm1 . id-partner1 id-partner1 id-partner1 id-partner1 . ."
+    ". giro-title1 giro-title1 . giro-num1 giro-num1 giro-num1 giro-num1 . ."
+    ". pic-title1 pic-title1 . pic-comp1 pic-comp1 pic-comp1 pic-comp1 . ."
+    ". email-title1 email-title1 . email-add1 email-add1 email-add1 email-add1 . ."
+    ". phone-title1 phone-title1 . phone-num1 phone-num1 phone-num1 phone-num1 . ."
+    ". param1 param1 . . . . . . ."
+    ". saldo-title1 saldo-title1 . saldo-num1 saldo-num1 saldo-num1 saldo-num1 . ."
+    ". exch-title1 exch-title1 . exch-unit1 exch-unit1 exch-unit1 exch-unit1 . ."
+    ". jumtrx-title1 jumtrx-title1 . jumtrx-num1 jumtrx-num1 jumtrx-num1 jumtrx-num1 . ."
+    ". limitbal-title1 limitbal-title1 . limitbal-num1 limitbal-num1 limitbal-num1 limitbal-num1 . ."
+    "line2 line2 line2 line2 line2 line2 line2 line2 line2 line2"
+    ". partner2 partner2 . . . . . . ."
+    ". partner-nm2 partner-nm2 . company-box2 company-box2 company-box2 company-box2 . ."
+    ". code-nm2 code-nm2 . id-partner2 id-partner2 id-partner2 id-partner2 . ."
+    ". giro-title2 giro-title2 . giro-num2 giro-num2 giro-num2 giro-num2 . ."
+    ". pic-title2 pic-title2 . pic-comp2 pic-comp2 pic-comp2 pic-comp2 . ."
+    ". email-title2 email-title2 . email-add2 email-add2 email-add2 email-add2 . ."
+    ". phone-title2 phone-title2 . phone-num2 phone-num2 phone-num2 phone-num2 . ."
+    ". param2 param2 . . . . . . ."
+    ". saldo-title2 saldo-title2 . saldo-num2 saldo-num2 saldo-num2 saldo-num2 . ."
+    ". exch-title2 exch-title2 . exch-unit2 exch-unit2 exch-unit2 exch-unit2 . ."
+    ". jumtrx-title2 jumtrx-title2 . jumtrx-num2 jumtrx-num2 jumtrx-num2 jumtrx-num2 . ."
+    ". limitbal-title2 limitbal-title2 . radio3 radio3 radio3 radio3 . ."
+    "line3 line3 line3 line3 line3 line3 line3 line3 line3 line3"
+    ". curex-title1 curex-title1 . curex-box1 curex-box1 curex-box1 curex-box1 curex-box1 ."
+    "line4 line4 line4 line4 line4 line4 line4 line4 line4 line4"
+    ". . . . . . buttons buttons buttons buttons"
+}
+.contract-id-title.area {
+    grid-area: con-id-title;
+}
+.contract-id-box.area {
+    grid-area: con-id-box;
+}
+.dateStart-title.area {
+    grid-area: dateStart-title;
+}
+.scdateStart.area {
+    grid-area: dateStart-box;
+}
+.dateEnd-title.area {
+    grid-area: dateEnd-title;
+}
+.scdateEnd.area {
+    grid-area: dateEnd-box;
+}
+.statusCtr-title.area {
+    grid-area: statusCtr-title;
+}
+.statusCtr.area {
+    grid-area: statusCtr-box;
+}
+.stMeta.line1.area {
+    grid-area: line1;
+}
+.stMeta.partner-title1.area {
+    grid-area: partner1;
+}
+.stMeta.partner-name-title1.area {
+    grid-area: partner-nm1;
+}
+.stMeta.partner-name-box1.area {
+    grid-area: company-box1;
+}
+.stMeta.code-name-title1.area {
+    grid-area: code-nm1;
+}
+.stMeta.code-name-box1.area {
+    grid-area: id-partner1;
+}
+.stMeta.giro-acc-title1.area {
+    grid-area: giro-title1;
+}
+.stMeta.giro-acc-box1.area {
+    grid-area: giro-num1;
+}
+.stMeta.pic-title1.area {
+    grid-area: pic-title1;
+}
+.stMeta.pic-box1.area {
+    grid-area: pic-comp1;
+}
+.stMeta.email-title1.area {
+    grid-area: email-title1;
+}
+.stMeta.email-box1.area {
+    grid-area: email-add1;
+}
+.stMeta.phone-title1.area {
+    grid-area: phone-title1;
+}
+.stMeta.phone-box1.area {
+    grid-area: phone-num1;
+}
+.stMeta.param-title1.area {
+    grid-area: param1;
+}
+.stMeta.saldo-title1.area {
+    grid-area: saldo-title1;
+}
+.stMeta.saldo-box1.area {
+    grid-area: saldo-num1;
+}
+.stMeta.exchange-title1.area {
+    grid-area: exch-title1;
+}
+.stMeta.exchange-box1.area {
+    grid-area: exch-unit1;
+}
+.stMeta.jumtrx-title1.area {
+    grid-area: jumtrx-title1;
+}
+.stMeta.jumtrx-box1.area {
+    grid-area: jumtrx-num1;
+}
+.stMeta.limitbal-title1.area {
+    grid-area: limitbal-title1;
+}
+.stMeta.limitbal-box1.area {
+    grid-area: limitbal-num1;
+}
+.stMeta.line2.area {
+    grid-area: line2;
+}
+/* Partner 2 */
+.stMeta.partner-title2.area {
+    grid-area: partner2;
+}
+.stMeta.partner-name-title2.area {
+    grid-area: partner-nm2;
+}
+.stMeta.partner-name-box2.area {
+    grid-area: company-box2;
+}
+.stMeta.code-name-title2.area {
+    grid-area: code-nm2;
+}
+.stMeta.code-name-box2.area {
+    grid-area: id-partner2;
+}
+.stMeta.giro-acc-title2.area {
+    grid-area: giro-title2;
+}
+.stMeta.giro-acc-box2.area {
+    grid-area: giro-num2;
+}
+.stMeta.pic-title2.area {
+    grid-area: pic-title2;
+}
+.stMeta.pic-box2.area {
+    grid-area: pic-comp2;
+}
+.stMeta.email-title2.area {
+    grid-area: email-title2;
+}
+.stMeta.email-box2.area {
+    grid-area: email-add2;
+}
+.stMeta.phone-title2.area {
+    grid-area: phone-title2;
+}
+.stMeta.phone-box2.area {
+    grid-area: phone-num2;
+}
+.stMeta.param-title2.area {
+    grid-area: param2;
+}
+.stMeta.saldo-title2.area {
+    grid-area: saldo-title2;
+}
+.stMeta.saldo-box2.area {
+    grid-area: saldo-num2;
+}
+.stMeta.exchange-title2.area {
+    grid-area: exch-title2;
+}
+.stMeta.exchange-box2.area {
+    grid-area: exch-unit2;
+}
+.stMeta.jumtrx-title2.area {
+    grid-area: jumtrx-title2;
+}
+.stMeta.jumtrx-box2.area {
+    grid-area: jumtrx-num2;
+}
+.stMeta.limitbal-title2.area {
+    grid-area: limitbal-title2;
+}
+.stMeta.limitbal-box4.area {
+    grid-area: radio3;
+}
+.stMeta.line3.area {
+    grid-area: line3;
+}
+.stMeta.curex-partners-title1.area {
+    grid-area: curex-title1;
+}
+.stMeta.curex-partners-box1.area {
+    grid-area: curex-box1;
+}
+.stMeta.line4.area {
+    grid-area: line4;
+}
+.stMeta.bottom-buttons-box.area {
+    grid-area: buttons;
+}
+
+/* PROFILE PAGE */
+.profile-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . prof-con prof-con prof-con prof-con prof-con prof-con prof-con prof-con prof-con prof-con . . ."
+    ". . . . . chpass-con chpass-con chpass-con chpass-con chpass-con chpass-con chpass-con chpass-con chpass-con chpass-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.profile.table-container.area {
+    grid-area: prof-con;
+}
+.ch-password.table-container.area {
+    grid-area: chpass-con;
+}
+.profile.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead"
+    "prf-con prf-con prf-con prf-con prf-con prf-con prf-con prf-con prf-con prf-con"
+}
+.profile.table-head.area {
+    grid-area: con-thead;
+}
+.profile.area {
+    grid-area: prf-con;
+}
+.profile.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". avatar avatar avatar avatar avatar avatar avatar avatar ."
+    ". name-prof-title name-prof-title name-prof-box name-prof-box name-prof-box name-prof-box name-prof-box . ."
+    ". em-prof-title em-prof-title em-prof-box1 em-prof-box1 em-prof-box1 em-prof-box1 em-prof-box1 . ."
+    "lines1 lines1 lines1 lines1 lines1 lines1 lines1 lines1 lines1 lines1"
+    ". . . . . . . buttons-prof buttons-prof buttons-prof"
+}
+.avatar-container.area {
+    grid-area: avatar;
+}
+.input-title.nama.area {
+    grid-area: name-prof-title;
+}
+.name-prof-box.area {
+    grid-area: name-prof-box;
+}
+.input-title.email.area {
+    grid-area: em-prof-title;
+}
+.email-box1.area {
+    grid-area: em-prof-box1;
+}
+.first.lines.area {
+    grid-area: lines1;
+}
+.input-buttons-box.area {
+    grid-area: buttons-prof;
+}
+.ch-password.table-box.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead con-thead"
+    "chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con chpwd-con"
+}
+.ch-password.table-head.area {
+    grid-area: con-thead;
+}
+.ch-password.area {
+    grid-area: chpwd-con;
+}
+.ch-password.grids {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    ". curpass-title curpass-title curpass-box curpass-box curpass-box curpass-box curpass-box . ."
+    ". newpass-title newpass-title pass-box1 pass-box1 pass-box1 pass-box1 pass-box1 . ."
+    ". confpass-title confpass-title pass-box2 pass-box2 pass-box2 pass-box2 pass-box2 . ."
+    "lines2 lines2 lines2 lines2 lines2 lines2 lines2 lines2 lines2 lines2"
+    ". . . . . . . buttons-prof buttons-prof buttons-prof"
+}
+.input-title.current-pass.area {
+    grid-area: curpass-title;
+}
+.current-pass-box.area {
+    grid-area: curpass-box;
+}
+.input-title.new-pass.area {
+    grid-area: newpass-title;
+}
+.password-box1.area {
+    grid-area: pass-box1;
+}
+.input-title.confirm-pass.area {
+    grid-area: confpass-title;
+}
+.password-box2.area {
+    grid-area: pass-box2;
+}
+.second.lines.area {
+    grid-area: lines2;
+}
+.input-buttons-box.area {
+    grid-area: buttons-prof;
+}
+
+/* SETTINGS PAGE */
+.settings-page.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    "sdnav sdnav sdnav sdnav sdnav . . . . . . . . . . . . ."
+    ". . . . . set-con set-con set-con set-con set-con set-con set-con set-con set-con set-con . . ."
+}
+header.area {
+    grid-area: head;
+}
+.side-nav.area {
+    grid-area: sdnav;
+}
+.settings.table-container.area {
+    grid-area: set-con;
+}
+    /* settings table box grids */
+.settings.table-box.grids {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    overflow: hidden;
+    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    width: 100%;
+    /* border: 1px dashed; */
+    grid-template-areas: 
+    "set-thead set-thead set-thead set-thead set-thead set-thead set-thead set-thead set-thead set-thead"
+    "set-tbl set-tbl set-tbl set-tbl set-tbl set-tbl set-tbl set-tbl set-tbl set-tbl"
+}
+.settings.table-head.area {
+    grid-area: set-thead;
+}
+.settings-table.area {
+    grid-area: set-tbl;
+}
+    /* Add member box grids */
+.add-member-box.grids {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    max-width: 634px;
+    width: 634px;
+    grid-template-areas: 
+    "head head head head head head head head"
+    ". nm-title nm-title nm-box nm-box nm-box nm-box ."
+    ". em-title em-title em-box em-box em-box em-box ."
+    ". pass-title pass-title pass-box pass-box pass-box pass-box ."
+    ". role-title role-title role-box role-box role-box role-box ."
+    "foot foot foot foot foot foot foot foot"
+}
+.add-member-content.head.area {
+    grid-area: head;
+}
+.add-member-content.input-name.title.area {
+    grid-area: nm-title;
+}
+.add-member-content.input-name.box.area {
+    grid-area: nm-box;
+}
+.add-member-content.input-email.title.area {
+    grid-area: em-title;
+}
+.add-member-content.input-email.box.area {
+    grid-area: em-box;
+}
+.add-member-content.input-password.title.area {
+    grid-area: pass-title;
+}
+.add-member-content.input-password.box.area {
+    grid-area: pass-box;
+}
+.add-member-content.input-role.title.area {
+    grid-area: role-title;
+}
+.add-member-content.input-role.box.area {
+    grid-area: role-box;
+}
+.add-member-content.foot.area {
+    grid-area: foot;
+}
+
+/* Change Role box grids */
+.change-role-box.grids {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    max-width: 634px;
+    width: 634px;
+    grid-template-areas: 
+    "head head head head head head head head"
+    ". nm-title nm-title nm-box nm-box nm-box nm-box ."
+    ". role-title role-title role-box role-box role-box role-box ."
+    ". owner-title owner-title owner-box owner-box owner-box owner-box ."
+    "foot foot foot foot foot foot foot foot"
+}
+.change-role-content.head.area {
+    grid-area: head;
+}
+.change-role-content.input-name.title.area {
+    grid-area: nm-title;
+}
+.change-role-content.input-name.box.area {
+    grid-area: nm-box;
+}
+.change-role-content.input-role.title.area {
+    grid-area: role-title;
+}
+.change-role-content.input-role.box.area {
+    grid-area: role-box;
+}
+.change-role-content.input-owner.title.area {
+    grid-area: owner-title;
+}
+.change-role-content.input-owner.box.area {
+    grid-area: owner-box;
+}
+.change-role-content.foot.area {
+    grid-area: foot;
+}
+
+
+/* SIGN IN PAGE */
+.login.grids {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    /* height: 100vh; */
+    width: 100vw;
+    grid-template-areas: 
+    "head head head head head head head head head head head head head head head head head head"
+    ". . . . . . . . . . . . . . . . . ."
+    ". . . login-welc login-welc login-welc . . . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . login-sub login-sub login-sub login-sub . . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . inp-email inp-email inp-email inp-email inp-email . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . inp-pass inp-pass inp-pass inp-pass inp-pass . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . ver-pass ver-pass ver-pass ver-pass ver-pass . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . err-msg err-msg err-msg signin-btn signin-btn . login-image login-image login-image login-image login-image login-image . . ."
+    ". . . footer footer footer footer footer footer footer footer footer footer footer footer . . ."
+}
+.login-welcome.area {
+    grid-area: login-welc;
+}
+.login-subhead.area {
+    grid-area: login-sub;
+}
+.sign-in.email-box.area {
+    grid-area: inp-email;
+}
+.sign-in.password-box.area {
+    grid-area: inp-pass;
+}
+.sign-in.verify.password-box.area {
+    grid-area: ver-pass;
+}
+.sign-in.error-msg.area {
+    grid-area: err-msg;
+}
+.sign-in.btn.area {
+    grid-area: signin-btn;
+}
+.signup-box.area {
+    grid-area: signup-here;
+}
+.login-img.area {
+    grid-area: login-image;
+}
+.footer.area {
+    grid-area: footer;
+}
+
+/* THIS IS FOR RESPONSIVE VIEWING */
+@media screen and (max-width: 992px) {
+    
+    /* Login Page */
+    .login.grids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-auto-flow: column;
+        grid-column-gap: 2%;
+        /* height: 100vh; */
+        width: 100vw;
+        grid-template-areas: 
+        "head head head head head head head head head head head head head head head head head head"
+        ". . . . . . . . . . . . . . . . . ."
+        ". . . login-welc login-welc login-welc . . . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . login-sub login-sub login-sub login-sub . . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . inp-email inp-email inp-email inp-email inp-email . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . inp-pass inp-pass inp-pass inp-pass inp-pass . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . err-msg err-msg err-msg signin-btn signin-btn . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . footer footer footer footer footer footer footer footer footer footer footer footer . . ."
+    }
+}
+@media screen and (max-width: 800px) {
+    
+    /* Login Page */
+    .login.grids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-auto-flow: column;
+        grid-column-gap: 2%;
+        /* height: 100vh; */
+        width: 100vw;
+        grid-template-areas: 
+        "head head head head head head head head head head head head head head head head head head"
+        ". . . . . . . . . . . . . . . . . ."
+        ". . . login-welc login-welc login-welc . . . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . login-sub login-sub login-sub login-sub . . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . inp-email inp-email inp-email inp-email inp-email . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . inp-pass inp-pass inp-pass inp-pass inp-pass . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . err-msg err-msg err-msg signin-btn signin-btn . login-image login-image login-image login-image login-image login-image . . ."
+        ". . . footer footer footer footer footer footer footer footer footer footer footer footer . . ."
+    }
+}

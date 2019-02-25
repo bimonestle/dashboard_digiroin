@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Enterprise | Settings Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon-01.png" type="image/x-icon">
+    <!-- TABULATOR -->
+    <link href="https://unpkg.com/tabulator-tables@4.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/icons/DGN_Fontastic/digiroin-font-icon/font-icon.css" />
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- SLIM SELECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.css" rel="stylesheet"></link>
+
+    <!-- DATE -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DATERANGE PICKER -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- TABULATOR -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" class="wrapper settings-wrapper">
+        <main id="settings-page" class="settings-page grids">
+            <header class="header area scrolled">
+                <div class="menu-container">
+                    <a href="index.html">
+                        <img src="assets/img/logo-digiroin-enterprise.svg" alt="digiroin logo" srcset="">
+                    </a>
+                    <div id="profile-drop" class="profile-drop container">
+                        <div class="drop-container">
+                            <span id="notif-icon" class="font-icon icon-notifications"></span>
+                            <div class="links admin-profile">
+                                <span class="img-admin">
+                                    <img src="https://source.unsplash.com/random/50x50" alt="Admin Profile" class="admin">
+                                </span>
+                                <span class="admin-name">Admin Name</span>
+                                <span><i class="font-icon active icon-arrow"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div id="admin-dropdown" class="admin-dropdown">
+                            <div class="links drop-box">
+                                <p class="profile">
+                                    <a href="profile.html" class="profile">Profile</a>
+                                </p>
+                                <p class="settings">
+                                    <a href="settings.html" class="settings">Settings</a>
+                                </p>
+                                <p class="logout">
+                                    <a href="#logout" class="logout" onclick="logOut()">Logout</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- NOTIFICATIONS DROPDOWN -->
+                        <div id="notif-dropdown" class="notif-dropdown container">
+                            <div class="notif-head">
+                                <div class="notif-head-content">
+                                    <p class="notif-header">Notifications</p>
+                                    <p id="mark-read" class="mark-read">Mark all as read</p>
+                                </div>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SIDE NAV -->
+            <nav class="side-nav container area">
+                <div class="side-nav box">
+                    <div class="links">
+                        <p class="settings">
+                            <a href="settings.html" class="link settings active">Settings</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- SETTINGS TABLE CONTAINER -->
+            <div class="settings table-container area">
+                
+                <div class="back-home container area">
+                    <div class="back-home-buttons">
+                        <i class="font-icon icon-arrow"></i>
+                        <a href="index.html">Back To Home</a>
+                    </div>
+                </div>
+                <div class="settings table-box grids">
+                    <!-- Table Head -->
+                    <div class="settings table-head container area">
+                        <div class="settings table-head content">
+                            <div class="settings table-head titles area">
+                                <p id="settings-tab" class="settings tab-title tablinks">Team</p>
+                            </div>
+                            <div class="add-edit container">
+                                <input type="button" value="Edit" class="settings edit-btn" onclick="editMember()">
+                                <input type="button" value="Add" class="settings add-btn" onclick="openMemberModal()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SETTINGS TABLE -->
+                    <div id="settings-table" class="settings-table area"></div>
+                    <script>
+                        var settingsdata = [
+                                {id:1, name:"Andara Nesta",  email:"andaranesta@gmail.com", role:"Administrator (Owner)", lastLogin:"16/10/2018 12:00:59"},
+                                {id:2, name:"Allesandro",  email:"allesandro@gmail.com", role:"Developer", lastLogin:"01/04/2019 18:00:09"},
+                                {id:3, name:"Del Piero",  email:"delpiero@gmail.com", role:"Analyst", lastLogin:"31/08/2018 23:00:59"},
+                                {id:4, name:"Edgar Davids",  email:"edgardavids@gmail.com", role:"Viewer", lastLogin:"16/11/2018 00:00:00"},
+                            ];
+
+                        // TO CREATE NEW ELEMENT IN A TABLE CELL
+                        // AND THEN PUT IT IN TRXTABLE OBJECT
+
+                        // var printIcon = function(cell, formatterParams, onRendered){ //plain text value
+                        //                     return `<i class='font-icon icon-close'></i>
+                        //                             <b>TESTSTST</b>`;
+                        //                 };
+                            
+                        var printIcon = function(cell, formatterParams, onRendered){ //plain text value
+                            return `<input type="button" value="Change" class="cancel button">`;
+                        };
+                        var trxTable = new Tabulator("#settings-table", {
+                            // height: 450,
+                            layoutColumnsOnNewData:true,
+                            data:settingsdata,    //load row data from array
+                            layout:"fitColumns",      //fit columns to width of table
+                            // responsiveLayout:"hide",  //hide columns that dont fit on the table
+                            tooltips:true,            //show tool tips on cells
+                            addRowPos:"top",          //when adding a new row, add it to the top of the table
+                            history:true,             //allow undo and redo actions on the table
+                            pagination:"local",       //paginate the data
+                            paginationSize:10,         //allow 7 rows per page of data
+                            movableColumns:true,      //allow column order to be changed
+                            resizableRows:true,       //allow row order to be changed
+                            initialSort:[             //set the initial sort order of the data
+                                {column:"lastLogin", dir:"asc"},
+                            ],
+                            columns:[                 //define the table columns
+                                // {title:"Name", field:"name", widthGrow:5, editor:"input", formatter:printIcon},
+                                {title:"Name", field:"name", widthGrow:5, editor:"input"},
+                                {title:"Email", field:"email", widthGrow:5, editor:"input"},
+                                {title:"Role", field:"role", widthGrow:5, editor:"select", editorParams:{
+                                    "Personal":"personal",
+                                    "Enterprise":"enterprise"
+                                }},
+                                {title:"Last Login", field:"lastLogin", widthGrow:5, align:"left", sorter:"datetime", sorterParams:{
+                                    format:"YYYY-MM-DD HH:mm:ss"
+                                }},
+                                {formatter:printIcon, width:40, align:"center", cellClick:function(e, cell){alert("Printing row data for: " + cell.getRow().getData().name)}},
+                            ],
+                            
+                        });
+                    </script>
+
+                </div>
+            </div>
+
+        </main>
+
+        <!-- MODAL ADD MEMBER -->
+        <div id="add-member-modal" class="add-member-modal modal-wrapper">
+            <div class="add-member-box grids">
+                <div class="add-member-content head area">
+                    <p>Add Members</p>
+                    <i class="font-icon icon-close" onclick="closeAddMemberModal()"></i>
+                </div>
+                <div class="add-member-content input-name title area">Name</div>
+                <div class="add-member-content input-name box area">
+                    <div class="input-box">
+                        <input type="text" name="add-members-name" id="add-members-name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="add-member-content input-email title area">Email</div>
+                <div class="add-member-content input-email box area">
+                    <div class="input-box">
+                        <input type="email" name="add-members-email" id="add-members-email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="add-member-content input-password title area">Password</div>
+                <div class="add-member-content input-password box area">
+                    <div class="input-box">
+                        <input type="password" name="add-members-password" id="add-members-password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="add-member-content input-role title area">Role</div>
+                <div class="add-member-content input-role box area">
+                    <select name="role-type" id="role-type" class="role-type"></select>
+                    <!-- SLIM SELECT -->
+                    <script>
+                        var roleSelect = new SlimSelect({
+                            select: '#role-type',
+                            data: [
+                                {
+                                    placeholder: true,
+                                    text:"Select Role"
+                                },
+                                {text: "Administrator"},
+                                {text: "Developer"},
+                                {text: "Analyst"},
+                                {text: "Viewer"}
+                            ]
+                        })
+                    </script>
+                </div>
+                <div class="add-member-content foot area">
+                    <input type="button" value="Cancel" class="cancel" onclick="closeAddMemberModal()">
+                    <input type="button" value="Add" class="add" onclick="addNewAdmin()">
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL CHANGE ROLE MEMBER -->
+        <div id="change-role-modal" class="change-role-modal modal-wrapper">
+            <div class="change-role-box grids">
+                <div class="change-role-content head area">
+                    <p>Change Role</p>
+                    <i class="font-icon icon-close" onclick="closeChangeRoleModal()"></i>
+                </div>
+                <div class="change-role-content input-name title area">Name</div>
+                <div class="change-role-content input-name box area">
+                    <div class="input-box">
+                        <p>Andara Nesta</p>
+                    </div>
+                </div>
+                
+                <div class="change-role-content input-role title area">Role</div>
+                <div class="change-role-content input-role box area">
+                    <select name="role-type2" id="role-type2" class="role-type2"></select>
+                    <!-- SLIM SELECT -->
+                    <script>
+                        var roleSelect = new SlimSelect({
+                            select: '#role-type2',
+                            data: [
+                                {
+                                    placeholder: true,
+                                    text:"Select Role"
+                                },
+                                {text: "Administrator"},
+                                {text: "Developer"},
+                                {text: "Analyst"},
+                                {text: "Viewer"}
+                            ]
+                        })
+                    </script>
+                </div>
+
+                <div class="change-role-content input-owner title area">Owner</div>
+                <div class="change-role-content input-owner box area">
+                    <select name="owner-type" id="owner-type" class="owner-type"></select>
+                    <!-- SLIM SELECT -->
+                    <script>
+                        var roleSelect = new SlimSelect({
+                            select: '#owner-type',
+                            data: [
+                                {
+                                    placeholder: true,
+                                    text:"Select Owner"
+                                },
+                                {text: "Andara Nesta"},
+                                {text: "Alessandro Delpiero"},
+                                {text: "Edgar Davids"},
+                                {text: "Stacy Keibler"}
+                            ]
+                        })
+                    </script>
+                </div>
+                <div class="change-role-content foot area">
+                    <input type="button" value="Cancel" class="cancel" onclick="closeChangeRoleModal()">
+                    <input type="button" value="Save" class="save" onclick="saveNewRole()">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+</body>
+</html>

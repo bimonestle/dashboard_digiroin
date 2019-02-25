@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Enterprise | Transactions Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon-01.png" type="image/x-icon">
+    <!-- TABULATOR -->
+    <link href="https://unpkg.com/tabulator-tables@4.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/icons/DGN_Fontastic/digiroin-font-icon/font-icon.css" />
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- SLIM SELECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.css" rel="stylesheet"></link>
+
+    <!-- DATE -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DATERANGE PICKER -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- TABULATOR -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"></script>
+
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" class="wrapper transactions-wrapper">
+        <main id="transactions-page" class="transactions-page grids">
+            <header class="header area scrolled">
+                <div class="menu-container">
+                    <a href="index.html">
+                        <img src="assets/img/logo-digiroin-enterprise.svg" alt="digiroin logo" srcset="">
+                    </a>
+                    <div id="profile-drop" class="profile-drop container">
+                        <div class="drop-container">
+                            <span id="notif-icon" class="font-icon icon-notifications"></span>
+                            <div class="links admin-profile">
+                                <span class="img-admin">
+                                    <img src="https://source.unsplash.com/random/50x50" alt="Admin Profile" class="admin">
+                                </span>
+                                <span class="admin-name">Admin Name</span>
+                                <span><i class="font-icon active icon-arrow"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div id="admin-dropdown" class="admin-dropdown">
+                            <div class="links drop-box">
+                                <p class="profile">
+                                    <a href="profile.html" class="profile">Profile</a>
+                                </p>
+                                <p class="settings">
+                                    <a href="settings.html" class="settings">Settings</a>
+                                </p>
+                                <p class="logout">
+                                    <a href="#logout" class="logout" onclick="logOut()">Logout</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- NOTIFICATIONS DROPDOWN -->
+                        <div id="notif-dropdown" class="notif-dropdown container">
+                            <div class="notif-head">
+                                <div class="notif-head-content">
+                                    <p class="notif-header">Notifications</p>
+                                    <p id="mark-read" class="mark-read">Mark all as read</p>
+                                </div>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SIDE NAV -->
+            <nav class="side-nav container area">
+                <div class="side-nav box">
+                    <div class="links">
+                        <p class="home">
+                            <a href="index.html" class="link home">Home</a>
+                        </p>
+                        <p class="transactions">
+                            <a href="transactions_page.html" class="link transactions active">Transactions</a>
+                        </p>
+                        <p class="withdraw">
+                            <a href="withdraw_page.html" class="link withdraw">Withdraw</a>
+                        </p>
+                        <p class="customers">
+                            <a href="customers_page.html" class="link customers active">Customers</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- TRANSACTIONS TABLE -->
+            <div class="transactions table-container area">
+                <!-- FILTER BOX -->
+                <div class="transactions filter-container area">
+                    <div class="transactions filter-box">
+                        <div class="sch-filter container">
+                            <input type="text" name="trx-search" id="trx-search" placeholder="Search">
+                            <i class="font-icon icon-search"></i>
+                        </div>
+                        <div class="filter-button container">
+                            <div class="filter-icons">
+                                <span>Filter</span>
+                                <i class="font-icon icon-pengaturan"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Filter Dropdown -->
+                        <div class="filter-dropdown container">
+                            <div class="filter-dropdown-content">
+                                <div class="filter-dropdown-section checkboxes-container type">
+                                    <p class="dropdown-section title">Type</p>
+                                    <div class="dropdown-section checkboxes">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="personal-checkbox" id="personal-checkbox">
+                                            <span class="checkmark"></span>
+                                            <label for="personal-checkbox">Personal</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="enterprise-checkbox" id="enterprise-checkbox">
+                                            <span class="checkmark"></span>
+                                            <label for="enterprise-checkbox">Enterprise</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section amount-range">
+                                    <p class="dropdown-section title">Amount Range</p>
+                                    <div class="dropdown-section inputs">
+                                        <div class="input">
+                                            <input type="text" name="inp-amount1" id="inp-amount1">
+                                            <span>to</span>
+                                            <input type="text" name="inp-amount2" id="inp-amount2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section date-range">
+                                    <p class="dropdown-section title">Date Range</p>
+                                    <div class="dropdown-section datepickers">
+                                        <div class="datepicker">
+                                            <div id="trx-filterdate" style="cursor: pointer;">
+                                                <i class="fa fa-calendar"></i>&nbsp;
+                                                <span></span> <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section footer-filter">
+                                    <div class="clear-filters">
+                                        <p class="clear">Clear All Filters</p>
+                                    </div>
+                                    <div class="apply-filters">
+                                        <p class="apply">Apply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transactions table-box grids">
+                    <!-- Table Head -->
+                    <div class="transactions table-head container area">
+                        <div class="transactions table-head content">
+                            <div class="transactions table-head titles area">
+                                <p>Transactions</p>
+                            </div>
+                            <div class="transactions table-head buttons area">
+                                <input type="button" value="Export (.csv)" class="csv button">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRANSACTIONS TABLE -->
+                    <div id="transactions-table" class="transactions-table area"></div>
+                    <script>
+                        var transactionsdata = [
+                                {id:1, trxDate:"16/10/2018 12:00:59", type:"Personal", name:"Bukalapak", amount:"10", trxID:"P12345"},
+                                {id:2, trxDate:"16/10/2018 12:00:00", type:"Enterprise", name:"Tokopedia", amount:"100", trxID:"E22341"},
+                                {id:3, trxDate:"15/10/2018 12:00:59", type:"Personal", name:"Go-Jek", amount:"1000", trxID:"P67532"},
+                                {id:4, trxDate:"15/10/2018 12:00:00", type:"Enterprise", name:"Grab", amount:"10000", trxID:"E56890"},
+                                {id:5, trxDate:"14/10/2018 12:00:59", type:"Personal", name:"Happy Fresh", amount:"100000", trxID:"P43895"},
+                                {id:6, trxDate:"14/10/2018 12:00:00", type:"Personal", name:"OVO", amount:"1000000", trxID:"P12345"},
+                                {id:7, trxDate:"13/10/2018 12:00:59", type:"Enterprise", name:"Dana Bijak", amount:"20", trxID:"E22341"},
+                                {id:8, trxDate:"13/10/2018 12:00:00", type:"Personal", name:"Blue Pay", amount:"200", trxID:"P67532"},
+                                {id:9, trxDate:"12/10/2018 12:00:59", type:"Enterprise", name:"Blue Bird", amount:"2000", trxID:"E56890"},
+                                {id:10, trxDate:"12/10/2018 12:00:00", type:"Personal", name:"Happy Go Lucky", amount:"20000", trxID:"P43895"},
+                                {id:11, trxDate:"11/10/2018 12:00:59", type:"Enterprise", name:"Kredivo", amount:"200000", trxID:"P43895"},
+                                {id:12, trxDate:"11/10/2018 12:00:00", type:"Personal", name:"Traveloka", amount:"2000000", trxID:"P12345"},
+                                {id:13, trxDate:"10/10/2018 12:00:59", type:"Enterprise", name:"Pegi Pegi", amount:"30", trxID:"E22341"},
+                                {id:14, trxDate:"10/10/2018 12:00:00", type:"Personal", name:"Blue Film", amount:"300", trxID:"P67532"},
+                                {id:15, trxDate:"09/10/2018 12:00:59", type:"Enterprise", name:"Go-Blok", amount:"3000", trxID:"E56890"},
+                                {id:16, trxDate:"09/10/2018 12:00:00", type:"Personal", name:"Tiket", amount:"30000", trxID:"P43895"},
+                            ];
+                            
+                        // AXIOS
+                        var baseURLAuth = "https://wallet.digiro.in/api/";
+                        // var src = axios.get( baseURLAuth + 'trx/2200300003', {
+                        //     headers: {
+                        //         // 'crossDomain': true,
+                        //         'Authorization':'Basic NjI4MTIzMjI5MTA3Mzp0b2tlbl9iZ2hscGQ0aXY4cWIzOXVhajYzZw=='
+                        //         }
+                        //     })
+                        //     // If it's not registered, throm this response
+                        //     .then(function (response) {
+                        //         console.log(response.data);
+                        //         var axiosTrxResp = response.data.result; // The API Result
+                        //         var singleLevelResp = [];
+                        //         for (let i = 0; i < axiosTrxResp.length; i++) {
+                        //             singleLevelResp.push({
+                        //                 trxDate: moment.unix(axiosTrxResp[i].timestamp).format("DD/MM/YYYY h:m a"), // formatted with hours, minutes and AM PM
+                        //                 type:axiosTrxResp[i].request.type[0].toUpperCase() + // To make the first letter capitalized
+                        //                     axiosTrxResp[i].request.type.slice(1), // To print the rest of the capitalized letter
+                        //                 name:axiosTrxResp[i].request.from_giro,
+                        //                 amount:axiosTrxResp[i].request.amount,
+                        //                 trxID:axiosTrxResp[i].tx,
+                        //             })
+                                    
+                        //         }
+                        //         var trxTable = new Tabulator("#transactions-table", {
+                        //             // height: 450,
+                        //             layoutColumnsOnNewData:true,
+                        //             // data:transactionsdata,    //load row data from array
+                        //             data:singleLevelResp,    //load row data from array
+                        //             layout:"fitColumns",      //fit columns to width of table
+                        //             responsiveLayout:"hide",  //hide columns that dont fit on the table
+                        //             tooltips:true,            //show tool tips on cells
+                        //             addRowPos:"top",          //when adding a new row, add it to the top of the table
+                        //             history:true,             //allow undo and redo actions on the table
+                        //             pagination:"local",       //paginate the data
+                        //             paginationSize:10,         //allow 7 rows per page of data
+                        //             movableColumns:true,      //allow column order to be changed
+                        //             resizableRows:true,       //allow row order to be changed
+                        //             initialSort:[             //set the initial sort order of the data
+                        //                 {column:"trxDate", dir:"desc"},
+                        //             ],
+                        //             columns:[                 //define the table columns
+                        //                 {title:"Date", field:"trxDate", widthGrow:5, align:"left", sorter:"datetime", sorterParams:{
+                        //                     format:"DD/MM/YYYY h:m:s a"
+                        //                 }},
+                        //                 {title:"Type", field:"type", widthGrow:5, editorParams:{
+                        //                     "Personal":"personal",
+                        //                     "Enterprise":"enterprise"
+                        //                 }},
+                        //                 {title:"Business Name", field:"name",width:180, widthGrow:5},
+                        //                 {title:"Amount", field:"amount", align:"left", widthGrow:5,  formatter:"money", formatterParams:{
+                        //                     decimal:",",
+                        //                     thousand:".",
+                        //                     symbol:"Rp ",
+                        //                     precision:2
+                        //                 }},
+                        //                 {title:"Trx ID", field:"trxID",width:130, widthGrow:5}
+                        //             ],
+                        //             rowClick: function (e, row) {
+                        //                 console.log(row.getData());
+                        //                 var rowData = row.getData();
+                        //                 window.location.href = "transactions_page_meta.html?trxID=" + rowData.trxID;
+                        //             }
+                        //         });
+                        //         // CHANGING ARROW TABLE HEAD
+                        //         var tableArrow = document.querySelectorAll('.tabulator-col-content div:nth-child(2)');
+                        //         for (let i = 0; i < tableArrow.length; i++) {
+                        //             tableArrow[i].classList.remove('tabulator-arrow');
+                        //             tableArrow[i].classList.add('font-icon', 'icon-arrow');
+                        //         }
+                        //     })
+                        //     // If registered already, create this response
+                        //     .catch(function (error) {
+                        //         console.log(error);
+                        //     })
+                        
+                        // var baseURLAuth = "https://wallet.digiro.in/api/";
+                        var dataResult;
+                        const asyncExample = async() => {
+                            return await axios(baseURLAuth + 'trx/2200300004', {
+                                headers: {
+                                    // 'crossDomain': true,
+                                'Authorization':'Basic NjI4MTIzMjI5MTA3Mzp0b2tlbl9iZ2hscGQ0aXY4cWIzOXVhajYzZw=='
+                                }
+                            });
+                        }
+                        asyncExample().then(baseURLAuth => {
+
+                            // DATERANGE PICKER JS
+                            $(function() {
+                                // var start = moment().subtract(29, 'days');
+                                var start = getFirstDate();
+                                var firstStart = moment(start);
+                                var end = moment();
+                            
+                                function cb(firstStart, end) {
+                                    $('#trx-filterdate span').html(firstStart.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                }
+                            
+                                $('#trx-filterdate').daterangepicker({
+                                    startDate: start,
+                                    endDate: end,
+                                    opens: 'center',
+                                    ranges: {
+                                    'Today': [moment(), moment()],
+                                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                    }
+                                }, cb);
+                                cb(firstStart, end);
+                            });
+
+
+                            console.log("axios response: ", baseURLAuth);
+                            dataResult = baseURLAuth.data.result;
+
+                            var singleLevelResp = [];
+                            for (let i = 0; i < dataResult.length; i++) {
+                                singleLevelResp.push({
+                                    trxDate: moment.unix(dataResult[i].timestamp),//.format("DD/MM/YYYY k:m:s"), // formatted with hours, minutes and AM PM
+                                    // trxDate: moment.unix(dataResult[i].timestamp).format("DD/MM/YYYY k:m:s"), // formatted with hours, minutes and AM PM
+                                    type:dataResult[i].request.type[0].toUpperCase() + // To make the first letter capitalized
+                                        dataResult[i].request.type.slice(1), // To print the rest of the capitalized letter
+                                    name:dataResult[i].request.from_giro,
+                                    amount:dataResult[i].request.amount,
+                                    trxID:dataResult[i].tx
+                                })
+                            }
+                            console.log("Single Level Response Data: ", singleLevelResp);
+
+                            // Input field Search Bar
+                            var searchBar = document.getElementById('trx-search');
+                            searchBar.addEventListener('keyup', function searchTableFilter(event) {
+                                console.log(searchBar.value);
+                            })
+                            function paramLookup(cell) {
+                                return {param1: searchBar.value};
+                            }
+                            
+                            // CSV Download Button
+                            var csvBtn = document.querySelector('input.csv.button');
+                            csvBtn.addEventListener("click", function csvDownload() {
+                                trxTable.download("csv", "Transactions Data.csv");
+                            })
+
+                            // Apply Filter Button
+                            var applyBtn = document.querySelector('.apply-filters');
+                            applyBtn.addEventListener("click", updateFilter);
+                            // Trigger setFilter function with correct parameters
+                            function updateFilter() {
+                                var inpAmount1 = $('#inp-amount1').val();
+                                var inpAmount2 = $('#inp-amount2').val();
+                                // var date1 = getFirstDate();
+                                var date1 = moment($('#trx-filterdate').data('daterangepicker').startDate);
+                                var date2 = moment($('#trx-filterdate').data('daterangepicker').endDate);
+                                console.log("Apply filters!");
+                                console.log(date1);
+                                
+                                if (inpAmount1 == "" && inpAmount2 == "") {
+                                    trxTable.setFilter([
+                                        // {field:"amount", type:">=", value:inpAmount1 = 0},
+                                        // {field:"amount", type:"<=", value:inpAmount2 = getBiggestNumb()},
+                                        {field:"trxDate", type:">=", value:date1},
+                                        {field:"trxDate", type:"<=", value:date2},
+                                    ])
+                                } else {
+                                    trxTable.setFilter([
+                                        {field:"amount", type:">=", value:$('#inp-amount1').val()},
+                                        {field:"amount", type:"<=", value:$('#inp-amount2').val()},
+                                        {field:"trxDate", type:">=", value:date1},
+                                        {field:"trxDate", type:"<=", value:date2},
+                                    ])
+                                }
+                            }
+                            function getFirstDate() {
+                                var dates = [];
+                                var firstDate;
+                                for (let i = 0; i < singleLevelResp.length; i++) {
+                                    dates.push(singleLevelResp[i].trxDate)
+                                }
+                                // dates.sort(function (a,b) {
+                                //     return a - b;
+                                // })
+                                // firstDate = dates[0];
+                                firstDate = dates[dates.length - 1];
+                                console.log(moment(firstDate));
+                                var x = moment(firstDate);
+                                return x;
+                            }
+                            
+                            function getBiggestNumb() {
+                                var amounts = [];
+                                var biggestNumb;
+                                for (let j = 0; j < singleLevelResp.length; j++) {
+                                    amounts.push(singleLevelResp[j].amount)
+                                }
+                                amounts.sort(function (a,b) {
+                                    return a - b;
+                                });
+                                biggestNumb = amounts[amounts.length - 1]
+                                console.log("Biggest Amount Transaction: ", biggestNumb);
+                                return biggestNumb;
+                            }
+
+                            function userFilter(data, filterParams) {
+                                // return data.amount >= filterParams.amount1 || data.amount <= filterParams.amount2;
+                                return data.amount >= filterParams.amount1;
+                                return data.amount <= filterParams.amount2;
+                            }
+
+                            // Clear Filters Button
+                            var clearBtn = document.querySelector('.clear-filters');
+                            clearBtn.addEventListener("click", clearFilter)
+                            // Clear the filters when Clear Button is clicked
+                            function clearFilter() {
+                                console.log("Clear Filters");
+                                trxTable.clearFilter();
+                            }
+
+                            var trxTable = new Tabulator("#transactions-table", {
+                            // height: 450,
+                            layoutColumnsOnNewData:true,
+                            data:singleLevelResp,    //load row data from array
+                            layout:"fitColumns",      //fit columns to width of table
+                            responsiveLayout:"hide",  //hide columns that dont fit on the table
+                            tooltips:true,            //show tool tips on cells
+                            addRowPos:"top",          //when adding a new row, add it to the top of the table
+                            history:true,             //allow undo and redo actions on the table
+                            pagination:"local",       //paginate the data
+                            paginationSize:10,         //allow 7 rows per page of data
+                            movableColumns:true,      //allow column order to be changed
+                            resizableRows:true,       //allow row order to be changed
+                            initialSort:[             //set the initial sort order of the data
+                                {column:"trxDate", dir:"desc"},
+                            ],
+                            columns:[                 //define the table columns
+                                {title:"Date", field:"trxDate", widthGrow:6, align:"left", 
+                                formatter:"datetime", formatterParams:{
+                                    outputFormat:"DD/MM/YY k:mm:ss"
+                                }, sorter:"datetime", sorterParams:{
+                                    format:"DD/MM/YYYY k:mm:ss"
+                                }},
+                                {title:"Type", field:"type", widthGrow:5, editorParams:{
+                                    "Personal":"personal",
+                                    "Enterprise":"enterprise"
+                                }},
+                                {title:"Business Name", field:"name",width:180, widthGrow:5},
+                                {title:"Amount", field:"amount", align:"left", widthGrow:5,  formatter:"money", formatterParams:{
+                                    decimal:",",
+                                    thousand:".",
+                                    symbol:"Rp ",
+                                    precision:2
+                                }},
+                                {title:"Trx ID", field:"trxID",width:130, widthGrow:5}
+                            ],
+                            rowClick: function (e, row) {
+                                console.log(row);
+                                var rowTrxID = row._row.data.trxID;
+                                window.location.href = "transactions_page_meta.html?trxID=" + rowTrxID;
+                            }
+                        });
+
+                        // CHANGING ARROW TABLE HEAD
+                        var tableArrow = document.querySelectorAll('.tabulator-col-content div:nth-child(2)');
+                        for (let i = 0; i < tableArrow.length; i++) {
+                            tableArrow[i].classList.remove('tabulator-arrow');
+                            tableArrow[i].classList.add('font-icon', 'icon-arrow');
+                        }
+
+                    })
+                    .catch(err => console.log(err));
+                    </script>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/transactions.js"></script>
+</body>
+</html>

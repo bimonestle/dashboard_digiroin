@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Enterprise | Enterprise Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon-01.png" type="image/x-icon">
+    <!-- TABULATOR -->
+    <link href="https://unpkg.com/tabulator-tables@4.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/icons/DGN_Fontastic/digiroin-font-icon/font-icon.css" />
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- SLIM SELECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.css" rel="stylesheet"></link>
+
+    <!-- DATE -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DATERANGE PICKER -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- TABULATOR -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" class="wrapper enterprise-wrapper">
+        <main id="enterprise-page" class="enterprise-page grids">
+            <header class="header area scrolled">
+                <div class="menu-container">
+                    <a href="index.html">
+                        <img src="assets/img/logo-digiroin-enterprise.svg" alt="digiroin logo" srcset="">
+                    </a>
+                    <div id="profile-drop" class="profile-drop container">
+                        <div class="drop-container">
+                            <span id="notif-icon" class="font-icon icon-notifications"></span>
+                            <div class="links admin-profile">
+                                <span class="img-admin">
+                                    <img src="https://source.unsplash.com/random/50x50" alt="Admin Profile" class="admin">
+                                </span>
+                                <span class="admin-name">Admin Name</span>
+                                <span><i class="font-icon active icon-arrow"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div id="admin-dropdown" class="admin-dropdown">
+                            <div class="links drop-box">
+                                <p class="profile">
+                                    <a href="profile.html" class="profile">Profile</a>
+                                </p>
+                                <p class="settings">
+                                    <a href="settings.html" class="settings">Settings</a>
+                                </p>
+                                <p class="logout">
+                                    <a href="#logout" class="logout" onclick="logOut()">Logout</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- NOTIFICATIONS DROPDOWN -->
+                        <div id="notif-dropdown" class="notif-dropdown container">
+                            <div class="notif-head">
+                                <div class="notif-head-content">
+                                    <p class="notif-header">Notifications</p>
+                                    <p id="mark-read" class="mark-read">Mark all as read</p>
+                                </div>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SIDE NAV -->
+            <nav class="side-nav container area">
+                <div class="side-nav box">
+                    <div class="links">
+                        <p class="home">
+                            <a href="index.html" class="link home">Home</a>
+                        </p>
+                        <p class="transactions">
+                            <a href="transactions_page.html" class="link transactions">Transactions</a>
+                        </p>
+                        <p class="withdraw">
+                            <a href="withdraw_page.html" class="link withdraw active">Withdraw</a>
+                        </p>
+                        <p class="customers">
+                            <a href="customers_page.html" class="link customers">Customers</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ENTERPRISE TABLE -->
+            <div class="enterprise table-container area">
+                <!-- FILTER BOX -->
+                <div class="enterprise filter-container area">
+
+                    <!-- MAIN ACCOUNT FILTER BOX -->
+                    <div id="mainAcc-filter-box" class="enterprise filter-box mainAcc">
+                        <div class="sch-filter container">
+                            <input type="text" name="entp-accounts-search-filters" id="entp-accounts-search-filters" placeholder="Search">
+                            <i class="font-icon icon-search"></i>
+                        </div>
+                        <div class="filter-button container" onclick="openMainAccFilter()">
+                            <div class="filter-icons">
+                                <span>Filter</span>
+                                <i class="font-icon icon-pengaturan"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Accounts Filter Dropdown -->
+                        <div id="entp-accounts-filter" class="filter-dropdown container mainAcc">
+                            <div class="filter-dropdown-content">
+                                <div class="filter-dropdown-section date-range">
+                                    <p class="dropdown-section title">Date Range</p>
+                                    <div class="dropdown-section datepickers">
+                                        <div class="datepicker">
+                                            <div id="trx-filterdate" style="cursor: pointer;">
+                                                <i class="fa fa-calendar"></i>&nbsp;
+                                                <span></span> <i class="fa fa-caret-down"></i>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $(function() {
+                                                
+                                                    var start = moment().subtract(29, 'days');
+                                                    var end = moment();
+                                                
+                                                    function cb(start, end) {
+                                                        $('#trx-filterdate span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                                    }
+                                                
+                                                    $('#trx-filterdate').daterangepicker({
+                                                        startDate: start,
+                                                        endDate: end,
+                                                        ranges: {
+                                                        'Today': [moment(), moment()],
+                                                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                                        }
+                                                    }, cb);
+                                                
+                                                    cb(start, end);
+                                                
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section footer-filter">
+                                    <div class="clear-filters">
+                                        <p class="clear">Clear All Filters</p>
+                                    </div>
+                                    <div class="apply-filters">
+                                        <p class="apply">Apply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACTIONS FILTER BOX -->
+                    <div id="actions-filter-box" class="enterprise filter-box actions">
+                        <div class="sch-filter container">
+                            <input type="text" name="entp-actions-search-filters" id="entp-actions-search-filters" placeholder="Search">
+                            <i class="font-icon icon-search"></i>
+                        </div>
+                        <div class="filter-button container" onclick="openActionsFilter()">
+                            <div class="filter-icons">
+                                <span>Filter</span>
+                                <i class="font-icon icon-pengaturan"></i>
+                            </div>
+                        </div>
+
+                        <!-- Actions Filter Dropdown -->
+                        <div id="entp-actions-filter" class="filter-dropdown container actions">
+                            <div class="filter-dropdown-content">
+                                <div class="filter-dropdown-section checkboxes-container type">
+                                    <p class="dropdown-section title">Type</p>
+                                    <div class="dropdown-section checkboxes">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="type-checkbox" id="unfreeze-type">
+                                            <span class="checkmark"></span>
+                                            <label for="unfreeze-type">Unfreeze</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="type-checkbox" id="freeze-type">
+                                            <span class="checkmark"></span>
+                                            <label for="freeze-type">Freeze</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section checkboxes-container akta">
+                                    <p class="dropdown-section title">File Akta</p>
+                                    <div class="dropdown-section checkboxes">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="akta-checkbox" id="akta-sudah">
+                                            <span class="checkmark"></span>
+                                            <label for="akta-sudah">Sudah</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="akta-checkbox" id="akta-belum">
+                                            <span class="checkmark"></span>
+                                            <label for="akta-checkbox">Belum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section checkboxes-container npwp">
+                                    <p class="dropdown-section title">File NPWP</p>
+                                    <div class="dropdown-section checkboxes">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="npwp-checkbox" id="npwp-sudah">
+                                            <span class="checkmark"></span>
+                                            <label for="npwp-sudah">Sudah</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="npwp-checkbox" id="npwp-belum">
+                                            <span class="checkmark"></span>
+                                            <label for="npwp-checkbox">Belum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section date-range">
+                                    <p class="dropdown-section title">Date Range</p>
+                                    <div class="dropdown-section datepickers">
+                                        <div class="datepicker">
+                                            <div id="trx-filterdate" style="cursor: pointer;">
+                                                <i class="fa fa-calendar"></i>&nbsp;
+                                                <span></span> <i class="fa fa-caret-down"></i>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $(function() {
+                                                
+                                                    var start = moment().subtract(29, 'days');
+                                                    var end = moment();
+                                                
+                                                    function cb(start, end) {
+                                                        $('#trx-filterdate span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                                    }
+                                                
+                                                    $('#trx-filterdate').daterangepicker({
+                                                        startDate: start,
+                                                        endDate: end,
+                                                        ranges: {
+                                                        'Today': [moment(), moment()],
+                                                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                                        }
+                                                    }, cb);
+                                                
+                                                    cb(start, end);
+                                                
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-dropdown-section footer-filter">
+                                    <div class="clear-filters">
+                                        <p class="clear">Clear All Filters</p>
+                                    </div>
+                                    <div class="apply-filters">
+                                        <p class="apply">Apply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="enterprise table-box grids">
+                    <!-- Table Head -->
+                    <div class="enterprise table-head container area">
+                        <div class="enterprise table-head content">
+                            <div class="enterprise table-head titles area">
+                                <p id="mn-acc-tab" class="mn-acc tablinks active" onclick="openTabs(event, 'mn-acc-table')">Main Accounts</p>
+                                <p id="actions-tab" class="actions tablinks" onclick="openTabs(event, 'actions-table')">Actions</p>
+                                <!-- <p id="mn-acc-tab" class="mn-acc tablinks active" onclick="showMainAccountTable()">Main Accounts</p>
+                                <p id="actions-tab" class="actions tablinks" onclick="showActionsTable()">Actions</p> -->
+                            </div>
+                            <div class="enterprise table-head buttons area">
+                                <input type="button" value="Export (.csv)" class="button">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAIN ACCOUNTS TABLE -->
+                    <div id="mn-acc-table" class="mn-acc-table area active tabcontent"></div>
+                    <script>
+                        var mainAccountsData = [
+                                {id:1, createdDate:"16/10/2018 12:00:59", grAcc:"5255051447", name:"Bukalapak", mnEmail:"bukalapak@gmail.com", subAcc:"2"},
+                                {id:2, createdDate:"16/10/2018 12:00:00", grAcc:"5255051448", name:"Tokopedia", mnEmail:"tokopedia@tokopedia.com", subAcc:"0"},
+                                {id:3, createdDate:"15/10/2018 12:00:59", grAcc:"5255051449", name:"Go-Jek", mnEmail:"gojek@gomail.com", subAcc:"3"},
+                                {id:4, createdDate:"15/10/2018 12:00:00", grAcc:"5255051450", name:"Grab", mnEmail:"grab@grabmail.com", subAcc:"5"},
+                                {id:5, createdDate:"14/10/2018 12:00:59", grAcc:"5255051451", name:"Happy Fresh", mnEmail:"happyfresh@happy.com", subAcc:"1"},
+                                {id:6, createdDate:"14/10/2018 12:00:00", grAcc:"5255051452", name:"OVO", mnEmail:"ovo@telur.com", subAcc:"2"},
+                                {id:7, createdDate:"13/10/2018 12:00:59", grAcc:"5255051453", name:"Dana Bijak", mnEmail:"danabijak@bijak.com", subAcc:"0"},
+                                {id:8, createdDate:"13/10/2018 12:00:00", grAcc:"5255051454", name:"Blue Pay", mnEmail:"bluepay@bluemail.com", subAcc:"3"},
+                                {id:9, createdDate:"12/10/2018 12:00:59", grAcc:"5255051455", name:"Blue Bird", mnEmail:"bluebird@taxi.com", subAcc:"5"},
+                                {id:10, createdDate:"12/10/2018 12:00:00", grAcc:"5255051456", name:"Happy Go Lucky", mnEmail:"happygolucky@lucky.com", subAcc:"1"},
+                                {id:11, createdDate:"11/10/2018 12:00:59", grAcc:"5255051457", name:"Kredivo", mnEmail:"kredivo@kredivo.com", subAcc:"1"},
+                                {id:12, createdDate:"11/10/2018 12:00:00", grAcc:"5255051458", name:"Traveloka", mnEmail:"traveloka@traveloka.com", subAcc:"2"},
+                                {id:13, createdDate:"10/10/2018 12:00:59", grAcc:"5255051459", name:"Pegi Pegi", mnEmail:"pegipegi@pergi.com", subAcc:"0"},
+                                {id:14, createdDate:"10/10/2018 12:00:00", grAcc:"5255051460", name:"Blue Film", mnEmail:"bluefilm@xxx.com", subAcc:"3"},
+                                {id:15, createdDate:"09/10/2018 12:00:59", grAcc:"5255051461", name:"Go-Blok", mnEmail:"goblok@blok.com", subAcc:"5"},
+                                {id:16, createdDate:"09/10/2018 12:00:00", grAcc:"5255051462", name:"Tiket", mnEmail:"tiket@karcis.com", subAcc:"1"},
+                            ];
+                            
+                        var mainAccTable = new Tabulator("#mn-acc-table", {
+                            // height: 450,
+                            layoutColumnsOnNewData:true,
+                            data:mainAccountsData,    //load row data from array
+                            layout:"fitColumns",      //fit columns to width of table
+                            responsiveLayout:"hide",  //hide columns that dont fit on the table
+                            tooltips:true,            //show tool tips on cells
+                            addRowPos:"top",          //when adding a new row, add it to the top of the table
+                            history:true,             //allow undo and redo actions on the table
+                            pagination:"local",       //paginate the data
+                            paginationSize:10,        //allow 7 rows per page of data
+                            movableColumns:true,      //allow column order to be changed
+                            resizableRows:true,       //allow row order to be changed
+                            initialSort:[             //set the initial sort order of the data
+                                {column:"createdDate", dir:"desc"},
+                            ],
+                            columns:[                 //define the table columns
+                                {title:"Created", field:"createdDate", width:180, widthGrow:1, align:"left", sorter:"datetime", sorterParams:{
+                                    format:"YYYY-MM-DD HH:mm:ss"
+                                }},
+                                {title:"Giro Account", field:"grAcc", widthGrow:1},
+                                {title:"Business Name", field:"name", widthGrow:1},
+                                {title:"Main Email", field:"mnEmail", widthGrow:1},
+                                {title:"Sub Acc Amount", field:"subAcc", widthGrow:1, align:"center"}
+                            ],
+                            rowClick: function (e, row) {
+                                console.log(row);
+                                window.location.href = "enterprise_page_main_account_meta.html";
+                            }
+                            
+                        });
+                    </script>
+
+                    <!-- ACTIONS TABLE -->
+                    <div id="actions-table" class="actions-table area tabcontent"></div>
+                    <script>
+                        var actionsData = [
+                                {id:1, actions:"x", grAcc:"5255051447", name:"Bukalapak", akta:"bukalapak@gmail.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:2, actions:"x", grAcc:"5255051448", name:"Tokopedia", akta:"tokopedia@tokopedia.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:3, actions:"x", grAcc:"5255051449", name:"Go-Jek", akta:"gojek@gomail.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:4, actions:"x", grAcc:"5255051450", name:"Grab", akta:"grab@grabmail.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:5, actions:"x", grAcc:"5255051451", name:"Happy Fresh", akta:"happyfresh@happy.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:6, actions:"x", grAcc:"5255051452", name:"OVO", akta:"ovo@telur.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:7, actions:"x", grAcc:"5255051453", name:"Dana Bijak", akta:"danabijak@bijak.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:8, actions:"x", grAcc:"5255051454", name:"Blue Pay", akta:"bluepay@bluemail.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:9, actions:"x", grAcc:"5255051455", name:"Blue Bird", akta:"bluebird@taxi.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:10, actions:"x", grAcc:"5255051456", name:"Happy Go Lucky", akta:"happygolucky@lucky.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:11, actions:"x", grAcc:"5255051457", name:"Kredivo", akta:"kredivo@kredivo.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:12, actions:"x", grAcc:"5255051458", name:"Traveloka", akta:"traveloka@traveloka.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:13, actions:"x", grAcc:"5255051459", name:"Pegi Pegi", akta:"pegipegi@pergi.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:14, actions:"x", grAcc:"5255051460", name:"Blue Film", akta:"bluefilm@xxx.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:15, actions:"x", grAcc:"5255051461", name:"Go-Blok", akta:"goblok@blok.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                                {id:16, actions:"x", grAcc:"5255051462", name:"Tiket", akta:"tiket@karcis.com", npwp:true, noRek:false, email: true, alamat: false, domain: true, tujuan: false, jmlPeg: true},
+                            ];
+                            
+                        var actionsTable = new Tabulator("#actions-table", {
+                            // height: 450,
+                            layoutColumnsOnNewData:false,
+                            data:actionsData,         //load row data from array
+                            // layout:"fitColumns",      //commented to disable the responsive layout, and have horizontal scrollbar
+                            // responsiveLayout:"hide",  //commented to disable the responsive layout, and have horizontal scrollbar
+                            tooltips:true,            //show tool tips on cells
+                            addRowPos:"top",          //when adding a new row, add it to the top of the table
+                            history:true,             //allow undo and redo actions on the table
+                            pagination:"local",       //paginate the data
+                            paginationSize:10,         //allow 7 rows per page of data
+                            movableColumns:true,      //allow column order to be changed
+                            resizableRows:true,       //allow row order to be changed
+                            initialSort:[             //set the initial sort order of the data
+                                {column:"id", dir:"asc"},
+                            ],
+                            columns:[                 //define the table columns
+                                {title:"Actions", field:"actions", widthGrow:5},
+                                {title:"Giro Account", field:"grAcc", widthGrow:5},
+                                {title:"Business Name", field:"name"},
+                                {title:"Akta", field:"akta", align:"center", formatter:"tickCross"},
+                                {title:"NPWP", field:"npwp", align:"center", formatter:"tickCross"},
+                                {title:"No Rek", field:"noRek", align:"center", formatter:"tickCross"},
+                                {title:"Email", field:"email", align:"center", formatter:"tickCross"},
+                                {title:"Alamat", field:"alamat", align:"center", formatter:"tickCross"},
+                                {title:"Domain", field:"domain", align:"center", formatter:"tickCross"},
+                                {title:"Tujuan", field:"tujuan", align:"center", formatter:"tickCross"},
+                                {title:"Jml Pegawai", field:"jmlPeg", align:"center", formatter:"tickCross"},
+                            ],
+                            rowClick: function (e, row) {
+                                console.log(row);
+                                window.location.href = "enterprise_page_actions_meta.html";
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/enterprise.js"></script>
+</body>
+</html>

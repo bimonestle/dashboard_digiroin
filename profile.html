@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Enterprise | Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon-01.png" type="image/x-icon">
+    <!-- TABULATOR -->
+    <link href="https://unpkg.com/tabulator-tables@4.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/grids.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/icons/DGN_Fontastic/digiroin-font-icon/font-icon.css" />
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- SLIM SELECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.18.7/slimselect.min.css" rel="stylesheet"></link>
+
+    <!-- DATE -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DATERANGE PICKER -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- TABULATOR -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" class="wrapper profile-wrapper">
+        <main id="profile-page" class="profile-page grids">
+            <header class="header area scrolled">
+                <div class="menu-container">
+                    <a href="index.html">
+                        <img src="assets/img/logo-digiroin-enterprise.svg" alt="digiroin logo" srcset="">
+                    </a>
+                    <div id="profile-drop" class="profile-drop container">
+                        <div class="drop-container">
+                            <span id="notif-icon" class="font-icon icon-notifications"></span>
+                            <div class="links admin-profile">
+                                <span class="img-admin">
+                                    <img src="https://source.unsplash.com/random/50x50" alt="Admin Profile" class="admin">
+                                </span>
+                                <span class="admin-name">Admin Name</span>
+                                <span><i class="font-icon active icon-arrow"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div id="admin-dropdown" class="admin-dropdown">
+                            <div class="links drop-box">
+                                <p class="profile">
+                                    <a href="profile.html" class="profile">Profile</a>
+                                </p>
+                                <p class="settings">
+                                    <a href="settings.html" class="settings">Settings</a>
+                                </p>
+                                <p class="logout">
+                                    <a href="#logout" class="logout" onclick="logOut()">Logout</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- NOTIFICATIONS DROPDOWN -->
+                        <div id="notif-dropdown" class="notif-dropdown container">
+                            <div class="notif-head">
+                                <div class="notif-head-content">
+                                    <p class="notif-header">Notifications</p>
+                                    <p id="mark-read" class="mark-read">Mark all as read</p>
+                                </div>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-body-content">
+                                    <div class="notif-body-upper container">
+                                        <p class="type merchant">Merchant</p>
+                                        <span id="notif-dot" class="dot notif-dot"></span>
+                                    </div>
+                                    <div class="notif-body-middle">
+                                        <span id="user" class="user">Tokopedia</span>
+                                        <span> telah melengkapi data diri.</span>
+                                    </div>
+                                    <div class="notif-body-bottom">
+                                        <span id="notif-timelapse" class="notif-timelapse">1 h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SIDE NAV -->
+            <nav class="side-nav container area">
+                <div class="side-nav box">
+                    <div class="links">
+                        <p class="profile">
+                            <a href="profile.html" class="link profile active">Profile</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- PROFILE TABLE -->
+            <div class="profile table-container area">
+                
+                <div class="profile table-box grids">
+                    <!-- Table Head -->
+                    <div class="profile table-head container area">
+                        <div class="profile table-head content">
+                            <div class="profile table-head titles area">
+                                <p id="profile-tab" class="profile tab-title tablinks">Profile</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CREATE PROFILE -->
+                    <div id="profile" class="profile area tabcontent grids">
+                        <div class="avatar-container area">
+                            <div class="avatar content">
+                                <img src="assets/img/login_image.png" alt="Default Avatar.jpg" srcset="" width="120px" height="120px">
+                                <div class="change-avatar container">
+                                    <input type="file" name="change-ava-btn" id="change-ava-btn">
+                                    <img src="assets/img/change_avatar.svg" alt="Change Avatar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-title nama v-align-mid area">
+                            <p>Nama</p>
+                        </div>
+                        <div class="name-prof-box box-input-display area">
+                            <div class="input-box">
+                                <p>Andara Nesta</p>
+                            </div>
+                        </div>
+                        <div class="input-title email v-align-mid area">
+                            <p>Email</p>
+                        </div>
+                        <div class="email-box1 box-input-display area">
+                            <div class="input-box">
+                                <input type="text" name="company-name1" id="company-name1" placeholder="Company Name">
+                            </div>
+                        </div>
+
+                        <div class="first lines area box-input-display"></div>
+                        <div class="input-buttons-box box-input-display area">
+                            <input type="button" value="Cancel" class="cancel" onclick="cancelContract()">
+                            <input type="button" value="Save" class="save" onclick="createContract()">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CHANGE PASSWORD TABLE -->
+            <div class="ch-password table-container area">
+                
+                <div class="ch-password table-box grids">
+                    <!-- Table Head -->
+                    <div class="ch-password table-head container area">
+                        <div class="ch-password table-head content">
+                            <div class="ch-password table-head titles area">
+                                <p id="ch-password-tab" class="ch-password tab-title tablinks">Change Password</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHANGE PASSWORD -->
+                    <div id="change-password" class="ch-password area tabcontent grids">
+
+                        <div class="input-title current-pass v-align-mid area">
+                            <p>Current Password</p>
+                        </div>
+                        <div class="current-pass-box box-input-display area">
+                            <div class="input-box">
+                                <p>• • • • • • • • • • • •</p>
+                            </div>
+                        </div>
+                        <div class="input-title new-pass v-align-mid area">
+                            <p>New Password</p>
+                        </div>
+                        <div class="password-box1 box-input-display area">
+                            <div class="input-box">
+                                <input type="password" name="password1" id="password1" placeholder="Type Your New Password">
+                            </div>
+                            <div class="strength-pass-container">
+                                <p class="min-chars">Min 6 Characters</p>
+                                <p class="styled">
+                                    <meter max="4" id="password-strength-meter" min="0" max="100" low="25" high="75" optimum="100" value="0.1"></meter>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="input-title confirm-pass v-align-mid area">
+                            <p>Confirm Password</p>
+                        </div>
+                        <div class="password-box2 box-input-display area">
+                            <div class="input-box">
+                                <input type="password" name="password2" id="password2" placeholder="Confirm Your New Password">
+                            </div>
+                        </div>
+                        <div class="second lines area box-input-display"></div>
+                        <div class="input-buttons-box box-input-display area">
+                            <input type="button" value="Cancel" class="cancel" onclick="cancelContract()">
+                            <input type="button" value="Change" class="change" onclick="createContract()">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+</body>
+</html>
