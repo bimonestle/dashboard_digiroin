@@ -61,6 +61,7 @@ var verifyPassword = function (passVal, verVal) {
         console.log("Password Confirmed");
     } else {
         console.log("Password Is Incorrect");
+        document.getElementById("sign-in-error").style.display = "block;"
     }
 }
 signBtn.addEventListener("click", verifyPassword(passWord.value, verPass.value));

@@ -1251,6 +1251,7 @@ input.settings.edit-btn {
 .sign-in.password-box {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 30px;
 }
 .signup.tnc {
     margin-top: 8px;
