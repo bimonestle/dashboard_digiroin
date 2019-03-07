@@ -1238,6 +1238,7 @@ input.settings.edit-btn {
 }
 .login-subhead p {
     color: #888888;
+    margin-bottom: 30px;
 }
 .login-img img {
     margin-top: 140px;
